@@ -423,7 +423,187 @@ header .header-wrapper .header-bottom nav ul li .active{
 }
 /* End header */
 
+/* Homepage */
+main .section-banner-home .content{
+    position: relative;
+}
 
+main .section-banner-home .content img{
+    background-image: linear-gradient(to right, #8E0B12 50%, transparent 100%);
+}
+
+main .section-banner-home .content .text{
+    width: 40rem;
+    position: absolute;
+    top: 21.875rem;
+    left: 17.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--white);
+}
+
+main .section-banner-home .content .text .text-title{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+main .section-banner-home .content .text .text-content{
+    font-size: 1.125rem;
+}
+
+main .section-1-homepage{
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+main .section-1-homepage .container{
+    width: 85.5rem;
+}
+
+main .container .title-and-view{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+main .container .title-and-view .title h2{
+    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 3.75rem;
+}
+
+main .container .title-and-view .view-more{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.625rem;
+}
+
+main .container .title-and-view .view-more a{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: var(--red);
+}
+
+main .section-1-homepage .container .list-new{
+    display: flex;
+    gap: 3rem;
+}
+
+main .section-1-homepage .container .list-new .new-left img{
+    width: 40rem;
+    height: 21.25rem;
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+main .section-1-homepage .container .list-new .new-left .new-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+main .section-1-homepage .container .list-new .new-left .new-content .title h3{
+    color: var(--black);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 2rem;
+}
+
+main .section-1-homepage .container .list-new .new-left .new-content .content p{
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+main .section-1-homepage .container .list-new .new-left .new-content .date-and-views{
+    display: flex;
+    gap: .375rem;
+}
+
+main .section-1-homepage .container .list-new .new-left .new-content .date-and-views>p{
+    color: #515151;
+}
+
+main .section-1-homepage .container .list-new .new-left .new-content .date-and-views .date{
+    display: flex;
+    gap: 0.75rem;
+    color: #ED1E29;
+}
+
+main .section-1-homepage .container .list-new .new-left .new-content .date-and-views .views p{
+    color: #515151;
+}
+
+main .section-1-homepage .container .list-new .new-right{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top,
+main .section-1-homepage .container .list-new .new-right .new-bottom{
+    display: flex;
+    gap: 2.5rem;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top img,
+main .section-1-homepage .container .list-new .new-right .new-bottom img{
+    width: 14.5rem;
+    border-radius: 1rem;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top .title h3,
+main .section-1-homepage .container .list-new .new-right .new-bottom .title h3{
+    color: var(--black);
+    font-size: 1.125rem;
+    font-weight: 700;
+    line-height: 1.625rem;
+    width: 21.25rem;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top .content,
+main .section-1-homepage .container .list-new .new-right .new-bottom .content{
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top .content p,
+main .section-1-homepage .container .list-new .new-right .new-bottom .content p{
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top .date-and-views,
+main .section-1-homepage .container .list-new .new-right .new-bottom .date-and-views{
+    display: flex;
+    gap: .375rem;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top .date-and-views .date,
+main .section-1-homepage .container .list-new .new-right .new-bottom .date-and-views .date{
+    display: flex;
+    gap: 0.75rem;
+    color: #ED1E29;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top .date-and-views>p,
+main .section-1-homepage .container .list-new .new-right .new-bottom .date-and-views>p{
+    color: #515151;
+}
+
+main .section-1-homepage .container .list-new .new-right .new-top .date-and-views .views p,
+main .section-1-homepage .container .list-new .new-right .new-bottom .date-and-views .views p{
+    color: #515151;
+}
+/* End Homepage */
 
 /* Footer */
 footer{
@@ -437,7 +617,6 @@ footer .footer-wrapper{
     gap: 5.813rem;
     padding: 4.188rem 17.25rem;
     background-color: var(--white);
-    border: 1px solid #999999;
 }
 
 footer .footer-wrapper .footer-col-1{
@@ -482,6 +661,7 @@ footer .footer-wrapper .footer-col-2 h3,
 footer .footer-wrapper .footer-col-3 h3,
 footer .footer-wrapper .footer-col-4 h3{
     font-size: 1.125rem;
+    font-weight: bold;
 }
 
 footer .footer-wrapper .footer-col-2 .contact{
