@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VICA Header</title>
-    <link rel="stylesheet" href="asset/custom.css">
     <link rel="stylesheet" href="asset/scss/custom.scss">
 </head>
 <body>

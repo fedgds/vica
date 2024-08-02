@@ -1,7 +1,11 @@
 <?php include('header.php') ?>
 <main>
     <section class="section-banner-home">
+        <div class="background"></div>
         <div class="content">
+            <!-- <video controls>
+                <source src="asset/image/video-banner.mp4" type="video/mp4">
+            </video> -->
             <img src="asset/image/video.png" alt="">
             <div class="text">
                 <div class="text-title">
@@ -20,7 +24,10 @@
                     <h2>Tin mới nhất</h2>
                 </div>
                 <div class="view-more">
-                    <a href="">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="">Xem tất cả</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2254 4.55806C11.4695 4.31398 11.8652 4.31398 12.1093 4.55806L17.1093 9.55806C17.3533 9.80214 17.3533 10.1979 17.1093 10.4419L12.1093 15.4419C11.8652 15.686 11.4695 15.686 11.2254 15.4419C10.9813 15.1979 10.9813 14.8021 11.2254 14.5581L15.1584 10.625H3.33398C2.98881 10.625 2.70898 10.3452 2.70898 10C2.70898 9.65482 2.98881 9.375 3.33398 9.375H15.1584L11.2254 5.44194C10.9813 5.19786 10.9813 4.80214 11.2254 4.55806Z" fill="#ED1E29"/>
+                    </svg>
                 </div>
             </div>
             <div class="list-new">
@@ -99,7 +106,10 @@
                     <h2>Sự kiện sắp tới</h2>
                 </div>
                 <div class="view-more">
-                    <a href="">Xem tất cả <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="">Xem tất cả</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2254 4.55806C11.4695 4.31398 11.8652 4.31398 12.1093 4.55806L17.1093 9.55806C17.3533 9.80214 17.3533 10.1979 17.1093 10.4419L12.1093 15.4419C11.8652 15.686 11.4695 15.686 11.2254 15.4419C10.9813 15.1979 10.9813 14.8021 11.2254 14.5581L15.1584 10.625H3.33398C2.98881 10.625 2.70898 10.3452 2.70898 10C2.70898 9.65482 2.98881 9.375 3.33398 9.375H15.1584L11.2254 5.44194C10.9813 5.19786 10.9813 4.80214 11.2254 4.55806Z" fill="#ED1E29"/>
+                    </svg>
                 </div>
             </div>
             <div class="container-list">

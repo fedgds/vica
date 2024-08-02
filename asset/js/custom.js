@@ -35,3 +35,7 @@ function showContent(contentId) {
     document.getElementById(contentId).classList.add('active');
 }
 // End tab navigation profile page
+// Đo chiều rộng của viewport
+var viewportWidth = window.innerWidth;
+
+console.log('Chiều rộng của viewport: ' + viewportWidth + 'px');

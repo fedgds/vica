@@ -36,10 +36,56 @@
                         </form>
                     </div>
                     <div id="profile" class="child">
-                        Nội dung chỉnh sửa hồ sơ
+                        <div class="avatar">
+                            <img src="asset/image/avatar.png" alt="">
+                        </div>
+                        <form action="">
+                            <div class="title">
+                                <h3>Thông tin cá nhân</h3>
+                            </div>
+                            <div class="input">
+                                <div class="name">
+                                    <label for="name">Họ và tên <span>*</span></label>
+                                    <input type="text" id="name" placeholder="Hải Trần">
+                                </div>
+                                <div class="nick-name">
+                                    <label for="nick-name">Họ và tên <span>*</span></label>
+                                    <input type="text" id="nick-name" placeholder="Hải Trần">
+                                </div>
+                                <div class="birthday">
+                                    <label for="birthday">Ngày sinh</label>
+                                    <input type="date" id="birthday">
+                                </div>
+                                <div class="sex">
+                                    <label for="sex">Giới tính</label>
+                                    <select>
+                                        <option value="" selected>Nam</option>
+                                        <option value="">Nữ</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                     <div id="password" class="child">
-                        Nội dung mật khẩu
+                        <form action="">
+                            <div class="input">
+                                <div class="old-password">
+                                    <label for="old-password">Mật khẩu cũ</label>
+                                    <input type="password" id="old-password" placeholder="********">
+                                </div>
+                                <div class="new-password">
+                                    <label for="new-password">Mật khẩu mới</label>
+                                    <input type="password" id="new-password" placeholder="********">
+                                </div>
+                                <div class="confirm-password">
+                                    <label for="confirm-password">Xác nhận</label>
+                                    <input type="password" id="confirm-password" placeholder="********">
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button>Lưu thay đổi</button>
+                            </div>
+                        </form>
                     </div>
                     <div id="experience" class="child">
                         Nội dung kinh nghiệm làm việc
