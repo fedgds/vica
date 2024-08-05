@@ -23,7 +23,7 @@
                             <input type="checkbox" id="remember-me" checked>
                             <label for="remember-me">Ghi nhớ đăng nhập</label>
                         </div>
-                        <a href="" class="forgot-password" id="open-modal-forgot-password" onclick="openModalForgotPassword(event)">Quên mật khẩu</a>
+                        <a href="" class="forgot-password" id="open-modal-forgot-password">Quên mật khẩu</a>
                     </div>
                     <div class="button">
                         <button class="login">Đăng nhập</button>
@@ -92,7 +92,7 @@
                     <img src="asset/image/slide-forgot-password1.png" alt="">
                 </div>
                 <div class="form">
-                    <span class="close" onclick="closeModalForgotPassword()">
+                    <span class="close" id="close-modal-forgot-password">
                         <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
                             <path d="M30.5 30L10.5 10" stroke="#160042" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M10.5 30L30.5 10" stroke="#160042" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -120,7 +120,7 @@
                         </div>
                         <div class="button">
                             <button class="forgot-password">Quên mật khẩu</button>
-                            <span class="back" onclick="closeModalForgotPassword()">Quay lại đăng nhập</span>
+                            <span class="back" id="back-to-login">Quay lại đăng nhập</span>
                         </div>
                         <div class="register">
                             <p>Bạn chưa có tài khoản?</p>

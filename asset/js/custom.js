@@ -1,20 +1,59 @@
 // Modal forgot password page
-function openModalForgotPassword(event) {
-    event.preventDefault();
-    document.getElementById("forgotPasswordModal").style.display = "block";
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const openModalBtn = document.getElementById("open-modal-forgot-password");
+    const closeModalBtn = document.getElementById("close-modal-forgot-password");
+    const forgotPasswordModal = document.getElementById("forgotPasswordModal");
+    const backToLoginBtn = document.getElementById("back-to-login");
 
-function closeModalForgotPassword() {
-    document.getElementById("forgotPasswordModal").style.display = "none";
-}
+    openModalBtn.addEventListener("click", (event) => {
+        event.preventDefault();
+        forgotPasswordModal.style.visibility = "visible";
+    });
 
-window.onclick = function(event) {
-    var modal = document.getElementById("forgotPasswordModal");
-    if (event.target == modal) {
-        closeModalForgotPassword();
-    }
-}
+    closeModalBtn.addEventListener("click", () => {
+        forgotPasswordModal.style.visibility = "hidden";
+    });
+
+    backToLoginBtn.addEventListener("click", () => {
+        forgotPasswordModal.style.visibility = "hidden";
+    });
+});
+
 // End modal forgot password page
+
+// Modal menu header
+document.addEventListener('DOMContentLoaded', function() {
+    const openMenu = document.querySelector('#open-menu-header');
+    const closeMenu = document.querySelector('#close-menu-header');
+    const menuHeader = document.getElementById('menuHeader');
+    const backdrop = document.getElementById('backdrop');
+
+    function showMenu() {
+        menuHeader.classList.add('show');
+        backdrop.classList.add('show');
+    }
+
+    function hideMenu() {
+        menuHeader.classList.remove('show');
+        backdrop.classList.remove('show');
+    }
+
+    openMenu.addEventListener('click', showMenu);
+
+    closeMenu.addEventListener('click', hideMenu);
+
+    backdrop.addEventListener('click', hideMenu);
+
+    document.addEventListener('click', function(event) {
+        if (!menuHeader.contains(event.target) && !openMenu.contains(event.target)) {
+            hideMenu();
+        }
+    });
+});
+
+
+
+// End modal menu header
 
 // Tab navigation profile page
 function showContent(contentId) {

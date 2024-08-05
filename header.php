@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VICA Header</title>
-    <link rel="stylesheet" href="asset/scss/custom.scss">
+    <link rel="stylesheet" href="asset/scss/custom.css">
 </head>
 <body>
     <header>
@@ -45,7 +45,7 @@
                 <a class="sign-in" href="#">Đăng nhập</a>
             </div>
             <div class="logo-container">
-                <img src="asset/image/logo.png" alt="VICA Logo" class="logo">
+                <a href=""><img src="asset/image/logo.png" alt="VICA Logo" class="logo"></a>
             </div>
             <div class="header-bottom">
                 <nav>
@@ -62,5 +62,67 @@
                 </nav>
             </div>
         </div>
+        <div class="header-mobile">
+            <div class="logo">
+                <a href=""><img src="asset/image/logo.png" alt="VICA Logo" class="logo"></a>
+            </div>
+            <div class="icon" id="open-menu-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+        </div>
+        <div id="backdrop" class="backdrop"></div>
+        <div id="menuHeader" class="menu-mobile">
+            <div class="top">
+                <img src="asset/image/logo.png" alt="VICA Logo" class="logo">
+                <span class="close-menu" id="close-menu-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
+                        <path d="M30.5 30L10.5 10" stroke="#160042" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.5 30L30.5 10" stroke="#160042" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </div>
+            <form action="">
+                <button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <g clip-path="url(#clip0_270_920)">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.66536 1.83301C4.4437 1.83301 1.83203 4.44468 1.83203 7.66634C1.83203 10.888 4.4437 13.4997 7.66536 13.4997C10.887 13.4997 13.4987 10.888 13.4987 7.66634C13.4987 4.44468 10.887 1.83301 7.66536 1.83301ZM0.832031 7.66634C0.832031 3.8924 3.89142 0.833008 7.66536 0.833008C11.4393 0.833008 14.4987 3.8924 14.4987 7.66634C14.4987 9.37335 13.8728 10.9342 12.8379 12.1318L15.0189 14.3128C15.2142 14.508 15.2142 14.8246 15.0189 15.0199C14.8237 15.2152 14.5071 15.2152 14.3118 15.0199L12.1308 12.8389C10.9332 13.8738 9.37237 14.4997 7.66536 14.4997C3.89142 14.4997 0.832031 11.4403 0.832031 7.66634Z" fill="#999999"/>
+                        </g>
+                        <defs>
+                        <clipPath id="clip0_270_920">
+                        <rect width="16" height="16" fill="white"/>
+                        </clipPath>
+                        </defs>
+                    </svg>
+                </button>
+                <input type="text" class="input-1" id="search" placeholder="Tìm kiếm">
+            </form>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a class="active" href="#">Giới thiệu</a></li>
+                    <li><a href="#">Hội viên</a></li>
+                    <li><a href="#">Đào tạo</a></li>
+                    <li><a href="#">Cơ hội việc làm</a></li>
+                    <li><a href="#">Dự án</a></li>
+                    <li><a href="#">Cơ sở dữ liệu</a></li>
+                    <li><a href="#">Sự kiện</a></li>
+                    <li><a href="#">Tin tức</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <div class="phone-number">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.73268 2.04252C6.95002 0.832095 8.95439 1.04755 9.9737 2.40913L11.2347 4.09354C12.0641 5.20142 11.9909 6.74983 11.0064 7.72875L10.7676 7.96616C10.7572 7.99645 10.7319 8.09166 10.76 8.27262C10.8232 8.68011 11.1635 9.54452 12.592 10.9649C14.02 12.3848 14.8905 12.7248 15.3038 12.7882C15.4911 12.8169 15.5891 12.7901 15.6194 12.7795L16.0274 12.3739C16.9026 11.5036 18.2475 11.3409 19.3311 11.93L21.2416 12.9686C22.8775 13.8579 23.2909 16.0816 21.9505 17.4143L20.53 18.8268C20.0824 19.2718 19.4805 19.643 18.7459 19.7114C16.9369 19.8801 12.7187 19.6649 8.28659 15.2579C4.14868 11.1435 3.35462 7.55551 3.25415 5.78769L4.00294 5.74513L3.25415 5.78769C3.20335 4.89377 3.62576 4.13747 4.16308 3.6032L5.73268 2.04252ZM8.77291 3.30808C8.26628 2.63133 7.322 2.57752 6.79032 3.10619L5.22072 4.66688C4.8908 4.99493 4.73206 5.35646 4.75173 5.70258C4.83156 7.10717 5.47286 10.3449 9.34423 14.1943C13.4057 18.2326 17.1569 18.3531 18.6067 18.2179C18.9029 18.1903 19.1975 18.0364 19.4724 17.7631L20.8929 16.3507C21.4704 15.7765 21.343 14.731 20.5252 14.2864L18.6147 13.2479C18.0871 12.9611 17.469 13.0557 17.085 13.4375L16.6296 13.8904L16.1008 13.3586C16.6296 13.8904 16.6289 13.8911 16.6282 13.8918L16.6267 13.8933L16.6236 13.8962L16.6171 13.9025L16.6025 13.9161C16.592 13.9257 16.5799 13.9362 16.5664 13.9475C16.5392 13.97 16.5058 13.9954 16.4659 14.0222C16.3858 14.0758 16.2801 14.1342 16.1472 14.1837C15.8764 14.2846 15.5192 14.3387 15.0352 14.2707C14.1591 14.1418 12.8831 13.6235 11.2094 11.9685C9.53471 10.3129 8.75922 9.01829 8.41401 8.27277C8.22066 7.8544 8.13327 7.46556 8.08655 7.14918C8.03839 6.82064 8.03927 6.5199 8.10852 6.2641C8.17988 6.00066 8.30523 5.79978 8.40779 5.68527L8.77369 5.31232L8.77291 3.30808Z" fill="#160042"/>
+                    </svg>
+                    <span>(+84) 334567899</span>
+                </div>
+                <div class="email">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.51631 5.83572C3.57663 5.82528 3.6392 5.81999 3.70328 5.81999H20.2967C20.3608 5.81999 20.4234 5.82528 20.4837 5.83572L12.8828 12.2665C12.4101 12.6432 11.5899 12.6432 11.1172 12.2665L3.51631 5.83572ZM2.92847 6.66541V17.3333C2.92847 17.8925 3.40315 18.3333 3.98372 18.3333H20.0163C20.5969 18.3333 21.0715 17.8925 21.0715 17.3333V6.66541L13.5296 12.9816C12.6156 13.7249 11.3844 13.7249 10.4704 12.9816L2.92847 6.66541ZM3.70328 4.81999C2.56903 4.81999 1.62115 5.72894 1.62115 6.83333V17.3333C1.62115 18.4377 2.56903 19.3333 3.70328 19.3333H20.2967C21.431 19.3333 22.3788 18.4377 22.3788 17.3333V6.83333C22.3788 5.72894 21.431 4.81999 20.2967 4.81999H3.70328Z" fill="#160042"/>
+                    </svg>
+                    <span>vica@gmail.com</span>
+                </div>
+            </div>
+        </div>
     </header>
-
