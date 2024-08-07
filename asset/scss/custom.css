@@ -129,6 +129,7 @@ header .header-wrapper .header-top .search .search-form label {
 }
 header .header-wrapper .header-top .search .search-form .input-1 {
   font-family: var(--f-body);
+  color: var(--black);
   width: 7.5rem;
   height: 2.25rem;
   background-color: var(--white);
@@ -137,7 +138,6 @@ header .header-wrapper .header-top .search .search-form .input-1 {
   font-size: 0.875rem;
   border-radius: 3.125rem;
   border: none;
-  color: #999999;
   font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.25rem;
@@ -157,6 +157,12 @@ header .header-wrapper .header-top .search .search-form .input-1 {
     font-size: 0.625rem;
     padding-left: 1.5rem;
   }
+}
+header .header-wrapper .header-top .search .search-form .input-1::-moz-placeholder {
+  color: #999999;
+}
+header .header-wrapper .header-top .search .search-form .input-1::placeholder {
+  color: #999999;
 }
 header .header-wrapper .header-top .contact,
 header .header-wrapper .header-top .sign-in {
@@ -658,6 +664,7 @@ main .section-1-homepage .container .list-new .new-left .new-content .date-and-v
   font-family: var(--f-body);
   display: flex;
   gap: 0.375rem;
+  font-size: 1rem;
 }
 main .section-1-homepage .container .list-new .new-left .new-content .date-and-views > p {
   color: #515151;
@@ -945,7 +952,7 @@ main .section-3-homepage .container .list-course .course-2 h3 {
 main .section-4-homepage {
   margin-top: 11.5rem;
   height: 30rem;
-  background: var(--Secondary-Color-FAF0CA, #FAF0CA);
+  background: url("../image/background-section-4.png");
   display: flex;
   justify-content: center;
 }
@@ -1225,35 +1232,47 @@ main .section-7-homepage .container .container-2 .list-choose {
   background: var(--white);
   margin-bottom: 3rem;
 }
-main .section-7-homepage .container .container-2 .list-choose button {
+main .section-7-homepage .container .container-2 .list-choose nav {
   color: var(--black);
-  font-size: 1.25rem;
-  font-weight: 500;
-  line-height: 2rem;
-  padding: 0.625rem;
-  border-radius: 0.5rem;
   font-family: var(--f-body);
+  width: 56.125rem;
+  height: 3.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
 }
-main .section-7-homepage .container .container-2 .list-choose button:hover {
+main .section-7-homepage .container .container-2 .list-choose nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+main .section-7-homepage .container .container-2 .list-choose nav ul li {
+  padding: 0.625rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 2rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+main .section-7-homepage .container .container-2 .list-choose nav ul li.active {
   color: var(--white);
   background-color: #ED1E29;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2rem;
 }
-main .section-7-homepage .container .container-2 .list-choose .active {
+main .section-7-homepage .container .container-2 .list-choose nav ul li:hover {
   color: var(--white);
   background-color: #ED1E29;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2rem;
 }
-main .section-7-homepage .container .container-2 .list-partner {
-  display: grid;
+main .section-7-homepage .container .container-2 .list-partner .child {
+  display: none !important;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 1.5rem;
 }
-main .section-7-homepage .container .container-2 .list-partner .image {
+main .section-7-homepage .container .container-2 .list-partner .child .image {
   width: 9.375rem;
   height: 4.5rem;
   padding: 0.875rem 1.8125rem;
@@ -1261,18 +1280,24 @@ main .section-7-homepage .container .container-2 .list-partner .image {
   background-color: var(--white);
   box-shadow: 0px 4px 20px 0px rgba(21, 21, 21, 0.1);
 }
-main .section-7-homepage .container .container-2 .list-partner .image img {
+main .section-7-homepage .container .container-2 .list-partner .child .image img {
   width: inherit;
   height: inherit;
   flex-shrink: 0;
   -o-object-fit: contain;
      object-fit: contain;
 }
+main .section-7-homepage .container .container-2 .list-partner > .child {
+  display: none !important;
+}
+main .section-7-homepage .container .container-2 .list-partner > .child.active {
+  display: grid !important;
+}
 main .section-8-homepage {
   height: 26rem;
   display: flex;
   justify-content: center;
-  background-color: rgba(250, 240, 202, 0.6);
+  background-color: rgba(250, 240, 202, 0.4);
 }
 main .section-8-homepage .container {
   width: 85.5rem;
@@ -1337,10 +1362,10 @@ main .section-8-homepage .container .right .image {
   z-index: 990;
   background: url("../image/section8.png") 100%/cover no-repeat;
 }
-main .section-banner-about {
+main .section-banner-about, main .section-banner-member {
   position: relative;
 }
-main .section-banner-about .background {
+main .section-banner-about .background, main .section-banner-member .background {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1352,24 +1377,1062 @@ main .section-banner-about .background {
   background: linear-gradient(270deg, rgba(142, 11, 18, 0) 0%, #000 100%);
   z-index: 10;
 }
-main .section-banner-about .content {
+main .section-banner-about .content, main .section-banner-member .content {
   position: relative;
   width: inherit;
 }
-main .section-banner-about .content img {
+main .section-banner-about .content img, main .section-banner-member .content img {
   height: inherit;
   margin-top: 3.75rem;
 }
-main .section-banner-about .content .text {
+main .section-banner-about .content .text, main .section-banner-member .content .text {
+  font-family: var(--f-body);
+  color: var(--white);
   position: absolute;
+  top: 16.375rem;
+  left: 17.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 90;
+}
+main .section-banner-about .content .text .text-title h1, main .section-banner-member .content .text .text-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+}
+main .section-banner-about .content .text .bot, main .section-banner-member .content .text .bot {
+  display: flex;
+  gap: 1.25rem;
+}
+main .section-banner-about .content .text .bot a, main .section-banner-member .content .text .bot a {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .section-banner-about .content .text .bot span, main .section-banner-member .content .text .bot span {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .container-about, main .container-member {
+  width: 85.5rem;
+  display: flex;
+  gap: 3.4375rem;
+}
+main .container-about .left, main .container-member .left {
+  width: 61.25rem;
+}
+main .container-about .right, main .container-member .right {
+  width: 20.375rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+main .container-about .right .categoty-content, main .container-member .right .categoty-content {
+  font-family: var(--f-body);
+  color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
+  width: 13.4375rem;
+  height: 19.0625rem;
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-radius: 0.625rem;
+  background-color: var(--white);
+  box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(21, 21, 21, 0.1);
+}
+main .container-about .right .categoty-content .title, main .container-member .right .categoty-content .title {
+  padding-bottom: 0.875rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 0.0625rem solid #BD0F18;
+}
+main .container-about .right .categoty-content .title h3, main .container-member .right .categoty-content .title h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
+}
+main .container-about .right .categoty-content nav ul, main .container-member .right .categoty-content nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+main .container-about .right .categoty-content nav ul li, main .container-member .right .categoty-content nav ul li {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .container-about .right .categoty-content nav ul li.active, main .container-about .right .categoty-content nav ul li:hover, main .container-member .right .categoty-content nav ul li.active, main .container-member .right .categoty-content nav ul li:hover {
+  color: var(--Primary-Color-500, #ED1E29);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+main .container-about .right .popular-news, main .container-member .right .popular-news {
+  font-family: var(--f-body);
+  color: var(--black);
+}
+main .container-about .right .popular-news .title, main .container-member .right .popular-news .title {
+  margin-bottom: 1.875rem;
+}
+main .container-about .right .popular-news .title h3, main .container-member .right .popular-news .title h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+main .container-about .right .popular-news .list-news, main .container-member .right .popular-news .list-news {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .container-about .right .popular-news .list-news .child, main .container-member .right .popular-news .list-news .child {
+  font-family: var(--f-body);
+  display: flex;
+  gap: 1.25rem;
+  height: 6.625rem;
+}
+main .container-about .right .popular-news .list-news .child img, main .container-member .right .popular-news .list-news .child img {
+  width: 6.75rem;
+  height: inherit;
+  border-radius: 0.5rem;
+}
+main .container-about .right .popular-news .list-news .child .infor, main .container-member .right .popular-news .list-news .child .infor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .container-about .right .popular-news .list-news .child .infor .title-news, main .container-member .right .popular-news .list-news .child .infor .title-news {
+  width: 12.375rem;
+}
+main .container-about .right .popular-news .list-news .child .infor .title-news h4, main .container-member .right .popular-news .list-news .child .infor .title-news h4 {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .container-about .right .popular-news .list-news .child .infor .date-and-views, main .container-member .right .popular-news .list-news .child .infor .date-and-views {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+main .container-about .right .popular-news .list-news .child .infor .date-and-views > p, main .container-member .right .popular-news .list-news .child .infor .date-and-views > p {
+  color: #515151;
+}
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .date, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date {
+  display: flex;
+  gap: 0.75rem;
+  color: #ED1E29;
+}
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date p {
+  width: 5.3125rem;
+}
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .views p {
+  color: #515151;
+  width: 3.625rem;
+}
+main .section-1-about {
+  margin-top: 6.25rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-1-about .container-about .left {
+  font-family: var(--f-body);
+}
+main .section-1-about .container-about .left .title {
+  margin-bottom: 1.25rem;
+}
+main .section-1-about .container-about .left .title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  color: var(--black);
+}
+main .section-1-about .container-about .left .description p {
+  color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-1-about .container-about .left .main-image {
+  margin: 1.3125rem 0;
+  width: inherit;
+  height: 36.875rem;
+}
+main .section-1-about .container-about .left .main-image img {
+  border-radius: 0.625rem;
+}
+main .section-1-about .container-about .left .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3125rem;
+}
+main .section-1-about .container-about .left .content p {
+  color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-2-about {
+  margin-top: 4.375rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-2-about .container {
+  font-family: var(--f-body);
+  width: 85.5rem;
+  padding-top: 4.625rem;
+  padding-bottom: 9.375rem;
+}
+main .section-2-about .container .top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: var(--black);
+}
+main .section-2-about .container .top h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  width: 62.8125rem;
+  text-align: center;
+}
+main .section-2-about .container .top p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  width: 49.375rem;
+  text-align: center;
+}
+main .section-2-about .container .middle {
+  margin-top: 3rem;
+  margin-bottom: 3.125rem;
+}
+main .section-2-about .container .middle nav {
+  display: flex;
+  justify-content: center;
+}
+main .section-2-about .container .middle nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.9375rem 1.25rem;
+  gap: 1.875rem;
+  width: 28.75rem;
+  height: 2.875rem;
+  background: #FFF;
+  box-shadow: 0px 20px 60px 0px rgba(0, 85, 127, 0.1);
+  border-radius: 0.625rem;
+}
+main .section-2-about .container .middle nav ul li {
+  color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  padding: 0.625rem 1.25rem;
+}
+main .section-2-about .container .middle nav ul li.active {
+  border-radius: 5px;
+  background: #FDE7E8;
+  color: var(--Primary-Color-600, #BD0F18);
+}
+main .section-2-about .container .bottom {
+  display: flex;
+  gap: 3.125rem;
+  padding: 0 5.6875rem;
+  height: 20.625rem;
+}
+main .section-2-about .container .bottom img {
+  width: 34.375rem;
+  height: inherit;
+  border-radius: 16px;
+}
+main .section-2-about .container .bottom .content {
+  font-family: var(--f-body);
+  color: var(--black);
+  padding: 0.875rem 0;
+}
+main .section-2-about .container .bottom .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 1rem;
+}
+main .section-2-about .container .bottom .content nav {
+  width: inherit;
+}
+main .section-2-about .container .bottom .content nav ul {
+  display: flex;
+  flex-direction: column;
+}
+main .section-2-about .container .bottom .content nav ul li {
+  display: flex;
+  gap: 0.625rem;
+}
+main .section-2-about .container .bottom .content nav ul li svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+main .section-2-about .container .bottom .content nav ul li p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-letter-about {
+  margin-top: 6.25rem;
+  margin-bottom: 13.375rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-letter-about .left {
+  position: relative;
+  font-family: var(--f-body);
+  width: 57.9375rem;
+  padding: 3.125rem 3.9063rem 6.25rem 3.9063rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border-radius: 20px;
+  border: 0.5px solid var(--Text-400, #999);
+  box-shadow: 0px 4px 20px 0px rgba(21, 21, 21, 0.1);
+}
+main .section-letter-about .left .title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+main .section-letter-about .left .title h2 {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+}
+main .section-letter-about .left .title .date p {
+  color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+main .section-letter-about .left .content-header .header {
+  font-family: var(--f-body);
+  padding: 0 3.5625rem;
+  display: flex;
+  width: 34.8125rem;
+  gap: 120px;
+}
+main .section-letter-about .left .content-header .header .left-letter h2 {
+  width: 16rem;
+  color: var(--black);
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
+}
+main .section-letter-about .left .content-header .header .right-letter {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.875rem;
+}
+main .section-letter-about .left .content-header .header .right-letter .top h2 {
+  width: 24.0625rem;
+  color: var(--black);
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
+}
+main .section-letter-about .left .content-header .header .right-letter .bottom p {
+  color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+main .section-letter-about .left .sub-title {
+  font-family: var(--f-body);
+  color: var(--black);
+  text-align: center;
+}
+main .section-letter-about .left .sub-title h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+main .section-letter-about .left .sub-title h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .section-letter-about .left .content p {
+  font-family: var(--f-body);
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+main .section-letter-about .left .content p b {
+  font-weight: 700;
+}
+main .section-letter-about .left .sign {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: center;
+  font-family: var(--f-body);
+  color: var(--black);
+}
+main .section-letter-about .left .sign h3, main .section-letter-about .left .sign p {
+  width: 17rem;
+}
+main .section-letter-about .left .sign h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .section-letter-about .left .sign h3.child-1 {
+  margin-bottom: 1rem;
+}
+main .section-letter-about .left .sign h3.child-2 {
+  margin-bottom: 0.625rem;
+}
+main .section-letter-about .left .sign p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-letter-about .left .icon-social-media {
+  position: absolute;
+  right: 0;
+  bottom: -4.375rem;
+}
+main .section-rule-about {
+  margin-top: 6.25rem;
+  margin-bottom: 13.375rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-rule-about .left {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+main .section-rule-about .left .chapter {
+  font-family: var(--f-body);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .section-rule-about .left .chapter .title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+}
+main .section-rule-about .left .chapter .article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+main .section-rule-about .left .chapter .article h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+main .section-rule-about .left .chapter .article p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-rule-about .left .chapter .article ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+main .section-rule-about .left .chapter .article ul li {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-rule-about .left .icon-social-media {
+  position: absolute;
+  left: 0;
+  bottom: -4.375rem;
+}
+main .section-member-about {
+  margin-top: 6.25rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-member-about .left .list-member {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 2rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+main .section-member-about .left .list-member .child .image {
+  padding: 2.5rem 0.625rem 0 0.625rem;
+  border-radius: 5px 5px 0px 0px;
+  height: 20.375rem;
+  background: #F1F1F1;
+}
+main .section-member-about .left .list-member .child .image img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: inherit;
+}
+main .section-member-about .left .list-member .child .infor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+  font-family: var(--f-body);
+  padding: 1rem;
+}
+main .section-member-about .left .list-member .child .infor .name h3 {
+  color: var(--Text-Content, #453F3F);
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+main .section-member-about .left .list-member .child .infor .position p {
+  color: var(--red);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.3125rem;
+}
+main .section-table-about {
+  margin-top: 6.25rem;
+  margin-bottom: 13.375rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-table-about .container-about {
+  gap: 8.75rem;
+}
+main .section-table-about .left {
+  width: 56.5625rem !important;
+  font-family: var(--f-body);
+}
+main .section-table-about .left .title {
+  margin-bottom: 2.5rem;
+}
+main .section-table-about .left .title h2 {
+  color: #000;
+  font-family: var(--f-body);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+}
+main .section-table-about .left table {
+  width: inherit;
+  text-align: center;
+  font-family: var(--f-body);
+}
+main .section-table-about .left table thead {
+  background-color: #FAF0CA;
+}
+main .section-table-about .left table thead tr th {
+  padding: 2.5rem 0;
+  color: var(--Text-Content, #453F3F);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  border: 1px solid #999;
+}
+main .section-table-about .left table tbody tr td {
+  padding: 1.1875rem 0;
+  color: var(--Text-Content, #453F3F);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  border: 1px solid #999;
+}
+main .section-list-member {
+  margin-top: 6.25rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-list-member .container-member {
+  gap: 5rem !important;
+}
+main .section-list-member .container-member .left {
+  width: 60.25rem;
+}
+main .section-list-member .container-member .left form {
+  font-family: var(--f-body);
+  position: relative;
+  width: inherit;
+}
+main .section-list-member .container-member .left form label {
+  position: absolute;
+  left: 1.625rem;
+  top: 1.25rem;
+}
+main .section-list-member .container-member .left form label svg {
+  width: 1.2813rem;
+  height: 1.2813rem;
+}
+main .section-list-member .container-member .left form input {
+  width: 45.875rem;
+  padding: 1.25rem 9.375rem 1.25rem 3.5rem;
+  border-radius: 1.875rem;
+  border: 1px #EAEEF4;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 4px 20px 0px rgba(21, 21, 21, 0.1);
+}
+main .section-list-member .container-member .left form input::-moz-placeholder {
+  color: var(--Neutral-1, #898A8D);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-list-member .container-member .left form input::placeholder {
+  color: var(--Neutral-1, #898A8D);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-list-member .container-member .left form button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 6.25rem;
+  background: var(--Primary-Color-500, #ED1E29);
+  border: 1px solid #ED1E29;
+  color: var(--Text-White, var(--HEADER, #FFF));
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 0.625rem;
+  right: 2.5rem;
+}
+main .section-list-member .container-member .left form button:hover {
+  border: 1px solid #ED1E29;
+  color: #ED1E29;
+  background-color: var(--white);
+}
+main .section-list-member .container-member .left .business-member, main .section-list-member .container-member .left .individual-member {
+  margin-top: 3rem;
+  font-family: var(--f-body);
+}
+main .section-list-member .container-member .left .business-member h2, main .section-list-member .container-member .left .individual-member h2 {
+  color: var(--Text-content, #303030);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  width: inherit;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #ED1E29;
+  margin-bottom: 2.5rem;
+}
+main .section-list-member .container-member .left .business-member .link, main .section-list-member .container-member .left .individual-member .link {
+  width: 4.5rem;
+  height: 1.75rem;
+  display: flex;
+  padding: 0.5rem 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3.125rem;
+  background-color: var(--white);
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+}
+main .section-list-member .container-member .left .business-member .link a, main .section-list-member .container-member .left .individual-member .link a {
+  color: var(--Primary-Color-500, #ED1E29);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+main .section-list-member .container-member .left .business-member .link:hover, main .section-list-member .container-member .left .individual-member .link:hover {
+  background-color: var(--Primary-Color-500, #ED1E29);
+}
+main .section-list-member .container-member .left .business-member .link:hover a, main .section-list-member .container-member .left .individual-member .link:hover a {
+  color: var(--white);
+}
+main .section-list-member .container-member .left .business-member .pagination, main .section-list-member .container-member .left .individual-member .pagination {
+  font-family: var(--f-body);
+  display: flex;
+  justify-content: center;
+}
+main .section-list-member .container-member .left .business-member .pagination ul, main .section-list-member .container-member .left .individual-member .pagination ul {
+  display: flex;
+  gap: 0.6875rem;
+}
+main .section-list-member .container-member .left .business-member .pagination li, main .section-list-member .container-member .left .individual-member .pagination li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  color: var(--black);
+  font-size: 0.875rem;
+  font-weight: 31.25rem;
+  line-height: 1.3125rem;
+  border: 1px solid var(--Primary-Color-50, #FDE7E8);
+  background: var(--HEADER, #FFF);
+}
+main .section-list-member .container-member .left .business-member .pagination li a, main .section-list-member .container-member .left .individual-member .pagination li a {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section-list-member .container-member .left .business-member .pagination li.active, main .section-list-member .container-member .left .business-member .pagination li:hover, main .section-list-member .container-member .left .individual-member .pagination li.active, main .section-list-member .container-member .left .individual-member .pagination li:hover {
+  background: var(--Primary-Color-500, #ED1E29);
+  color: var(--white);
+}
+main .section-list-member .container-member .left .business-member {
+  margin-bottom: 3.25rem;
+}
+main .section-list-member .container-member .left .business-member .list-member {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 2.5rem;
+  -moz-column-gap: 5.125rem;
+       column-gap: 5.125rem;
+  margin-bottom: 3rem;
+}
+main .section-list-member .container-member .left .business-member .list-member .child {
+  display: flex;
+  gap: 1.5rem;
+}
+main .section-list-member .container-member .left .business-member .list-member .child img {
+  padding: 0.3125rem;
+  width: 5.0625rem;
+  height: 2.75rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 4.788px;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 4.788px 11.97px 0px rgba(21, 21, 21, 0.15);
+}
+main .section-list-member .container-member .left .business-member .list-member .name {
+  display: flex;
+  align-items: center;
+}
+main .section-list-member .container-member .left .business-member .list-member .name p {
+  color: var(--Text-content, #303030);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
+}
+main .section-list-member .container-member .left .individual-member .list-member {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 1rem;
+  -moz-column-gap: 9.25rem;
+       column-gap: 9.25rem;
+  margin-bottom: 3rem;
+}
+main .section-list-member .container-member .left .individual-member .list-member .child {
+  display: flex;
+  gap: 1rem;
+}
+main .section-list-member .container-member .left .individual-member .list-member .child img {
+  padding: 0.4688rem 0.4688rem 0 0.4688rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 8px;
+  background: var(--Primary-Color-50, #FDE7E8);
+}
+main .section-list-member .container-member .left .individual-member .list-member .name {
+  display: flex;
+  align-items: center;
+}
+main .section-list-member .container-member .left .individual-member .list-member .name p {
+  color: var(--Text-content, #303030);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
+}
+main .section-rights-member {
+  margin-top: 6.25rem;
+  margin-bottom: 13.375rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-rights-member .container-member {
+  gap: 3.3125rem;
+}
+main .section-rights-member .container-member .left {
+  position: relative;
+  width: 62rem;
+  color: var(--black);
+  font-family: var(--f-body);
+}
+main .section-rights-member .container-member .left .title {
+  margin-bottom: 1.875rem;
+}
+main .section-rights-member .container-member .left .title h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+}
+main .section-rights-member .container-member .left .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .section-rights-member .container-member .left .content .child {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+main .section-rights-member .container-member .left .content .child h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+main .section-rights-member .container-member .left .content .child p, main .section-rights-member .container-member .left .content .child ul > li {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-rights-member .container-member .left .content .child ul {
+  list-style: decimal;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-left: 1.5rem;
+}
+main .section-rights-member .container-member .left .content .child .sub-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .section-rights-member .container-member .left .content .child .sub-section .sub {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+main .section-rights-member .container-member .left .content .child .sub-section .sub h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .section-rights-member .container-member .left .content .child .sub-section .sub ul {
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+main .section-rights-member .container-member .left .icon-social-media {
+  position: absolute;
+  left: 0;
+  bottom: -4.375rem;
+}
+main .section-subscribe-member {
+  margin-top: 6.25rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-subscribe-member .container-member {
+  gap: 7.5rem;
+}
+main .section-subscribe-member .container-member .left {
+  font-family: var(--f-body);
+  width: 57.625rem;
+}
+main .section-subscribe-member .container-member .left .header {
+  margin-bottom: 3rem;
+}
+main .section-subscribe-member .container-member .left .header h2 {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin-bottom: 0.5rem;
+}
+main .section-subscribe-member .container-member .left .header p {
+  width: 48rem;
+  display: none;
+}
+main .section-subscribe-member .container-member .left .header p.active {
+  display: block;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .choose-subscribe {
+  margin-bottom: 2rem;
+}
+main .section-subscribe-member .container-member .left .choose-subscribe ul {
+  display: flex;
+  gap: 1rem;
+}
+main .section-subscribe-member .container-member .left .choose-subscribe ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  height: 1.75rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+  color: var(--Primary-Color-500, #ED1E29);
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+}
+main .section-subscribe-member .container-member .left .choose-subscribe ul li.active, main .section-subscribe-member .container-member .left .choose-subscribe ul li:hover {
+  color: var(--white);
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+  background: var(--Primary-Color-500, #ED1E29);
+}
+main .section-subscribe-member .container-member .left .form-subscribe .child {
+  display: none !important;
+}
+main .section-subscribe-member .container-member .left .form-subscribe .active {
+  display: flex !important;
+  margin-bottom: 3rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line input, main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line select, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line input, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line select {
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--Text-400, #999);
+  background: var(--HEADER, #FFF);
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line input:focus, main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line select:focus, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line input:focus, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line select:focus {
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line input::-moz-placeholder, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line input::-moz-placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line input::placeholder, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line input::placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line .form-group, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line .form-group label, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line .form-group label {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line .form-group label span, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .line .form-group label span {
+  margin-left: 0.25rem;
+  color: var(--red);
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member {
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-1, main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-3, main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-5, main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-8 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-2, main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-6 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-9 {
+  display: flex;
+  gap: 0.875rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-9 input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-9 p {
+  margin-top: 0.125rem;
+  color: var(--black);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-9 p span {
+  color: #0078FF;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member {
+  flex-direction: column;
+  gap: 3rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .infor h4 {
+  color: var(--Primary-Color-500, #ED1E29);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-1 .line-1, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-1 .line-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-1 .line-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-1, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-3, main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-7 {
+  display: flex;
+  gap: 0.875rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-7 input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-7 p {
+  margin-top: 0.125rem;
+  color: var(--black);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-7 p span {
+  color: #0078FF;
+}
+main .section-subscribe-member .container-member .left .form-subscribe .button {
+  display: flex;
+  justify-content: end;
+}
+main .section-subscribe-member .container-member .left .form-subscribe .button button {
+  display: flex;
+  padding: 0.75rem 3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: var(--Primary-Color-500, #ED1E29);
+  color: var(--Text-White, var(--HEADER, #FFF));
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
 }
 main .login-page {
   position: relative;
-  height: 60.75rem;
+  height: 64.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 main .login-page .left {
+  position: relative;
   height: inherit;
   display: flex;
   flex-direction: column;
@@ -1377,7 +2440,18 @@ main .login-page .left {
   align-items: center;
   background-color: rgba(250, 240, 202, 0.2);
 }
+main .login-page .left > .background {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url("../image/background-login-left.png") 100%/cover no-repeat;
+}
 main .login-page .left .container {
+  position: relative;
+  z-index: 10;
   width: 26.25rem;
   height: 36.625rem;
 }
@@ -1423,6 +2497,12 @@ main .login-page .left .container form .idOrEmail input, main .login-page .left 
   padding: 1rem 1.25rem;
   border: 1px solid var(--Text-400, #999);
   background: none;
+}
+main .login-page .left .container form .idOrEmail input::-moz-placeholder, main .login-page .left .container form .password input::-moz-placeholder {
+  color: var(--Text-400, #999);
+}
+main .login-page .left .container form .idOrEmail input::placeholder, main .login-page .left .container form .password input::placeholder {
+  color: var(--Text-400, #999);
 }
 main .login-page .left .container form .idOrEmail input:focus, main .login-page .left .container form .password input:focus {
   border: 1px solid var(--Primary-Color-500, #ED1E29);
@@ -1519,7 +2599,7 @@ main .login-page .right .background {
   bottom: 0;
   left: 0;
   right: 0;
-  background: url("../image/background-login.png") 100%/cover no-repeat;
+  background: url("../image/background-login-1.png") 100%/cover no-repeat;
 }
 main .login-page .right .card {
   position: relative;
@@ -1667,6 +2747,12 @@ main .login-page .section-forgot-password .container .form form .input .step-1 i
   border: 1px solid var(--Text-400, #999);
   background: none;
 }
+main .login-page .section-forgot-password .container .form form .input .step-1 input::-moz-placeholder {
+  color: var(--Text-400, #999);
+}
+main .login-page .section-forgot-password .container .form form .input .step-1 input::placeholder {
+  color: var(--Text-400, #999);
+}
 main .login-page .section-forgot-password .container .form form .input .step-1 input:focus {
   border: 1px solid var(--Primary-Color-500, #ED1E29);
   background-color: var(--white);
@@ -1697,6 +2783,12 @@ main .login-page .section-forgot-password .container .form form .input .step-2 .
   padding: 1rem 1.25rem;
   border: 1px solid var(--Text-400, #999);
   background: none;
+}
+main .login-page .section-forgot-password .container .form form .input .step-2 .new-password input::-moz-placeholder, main .login-page .section-forgot-password .container .form form .input .step-2 .confirm-password input::-moz-placeholder {
+  color: var(--Text-400, #999);
+}
+main .login-page .section-forgot-password .container .form form .input .step-2 .new-password input::placeholder, main .login-page .section-forgot-password .container .form form .input .step-2 .confirm-password input::placeholder {
+  color: var(--Text-400, #999);
 }
 main .login-page .section-forgot-password .container .form form .input .step-2 .new-password input:focus, main .login-page .section-forgot-password .container .form form .input .step-2 .confirm-password input:focus {
   border: 1px solid var(--Primary-Color-500, #ED1E29);
@@ -1759,108 +2851,117 @@ main .login-page .section-forgot-password .container .form form .register a {
   line-height: 1.375rem;
 }
 main .profile-page {
-  background-color: rgba(250, 240, 202, 0.2);
-}
-main .profile-page .container {
-  padding-top: 13.75rem;
+  position: relative;
+  margin-bottom: 6.25rem;
   padding-bottom: 6.25rem;
-  margin-left: 17.3125rem;
-  margin-right: 17.3125rem;
-  height: 18.75rem;
 }
-main .profile-page .container .title {
+main .profile-page > .background {
+  height: inherit;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background: url("../image/background-profile.png") 100%/cover no-repeat;
+}
+main .profile-page .container-profile {
+  position: relative;
+  z-index: 10;
+  font-family: var(--f-body);
+  padding: 13.75rem 17.3125rem 6.25rem 17.3125rem;
+}
+main .profile-page .container-profile .title {
   margin-bottom: 2rem;
 }
-main .profile-page .container .title h2 {
-  font-family: var(--f-body);
+main .profile-page .container-profile .title h2 {
   color: var(--black);
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3.75rem;
 }
-main .profile-page .container .content {
+main .profile-page .container-profile .content {
   display: flex;
   gap: 3.125rem;
 }
-main .profile-page .container .content .left-profile {
-  width: 20.25rem;
+main .profile-page .container-profile .content .left-profile {
+  height: 13.125rem;
+  width: 30%;
   background-color: var(--white);
   border-radius: 1rem;
+  box-shadow: 0px 8px 20px 0px rgba(21, 21, 21, 0.15);
 }
-main .profile-page .container .content .left-profile ul li {
+main .profile-page .container-profile .content .left-profile ul li {
   padding: 0.875rem 2rem;
   cursor: pointer;
   color: var(--black);
-  font-family: var(--f-body);
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.5rem;
 }
-main .profile-page .container .content .left-profile ul li.active {
+main .profile-page .container-profile .content .left-profile ul li.active {
   background: #FDE7E8;
   border-left: 0.125rem solid var(--Main-DA1F26, #DA1F26);
   color: #ED1E29;
   font-size: 1.125rem;
-  font-family: var(--f-body);
   font-weight: 700;
   line-height: 1.625rem;
   border-radius: 0rem 0rem 1rem 0rem;
 }
-main .profile-page .container .content .right-profile {
-  width: 62.1875rem;
+main .profile-page .container-profile .content .right-profile {
+  width: 100%;
+  box-shadow: 0px 4px 20px 0px rgba(21, 21, 21, 0.1);
   background-color: var(--white);
   border-radius: 1.25rem;
 }
-main .profile-page .container .content .right-profile .child {
-  display: none;
+main .profile-page .container-profile .content .right-profile > .child {
+  display: none !important;
 }
-main .profile-page .container .content .right-profile div.active {
-  display: block;
+main .profile-page .container-profile .content .right-profile > .child.active {
+  display: block !important;
 }
-main .profile-page .container .content .right-profile #overview {
+main .profile-page .container-profile .content .right-profile #overview {
   padding: 3.125rem;
   overflow: auto;
 }
-main .profile-page .container .content .right-profile #overview .title h3 {
+main .profile-page .container-profile .content .right-profile #overview .title h3 {
   color: #000;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2rem;
 }
-main .profile-page .container .content .right-profile #overview form .input {
+main .profile-page .container-profile .content .right-profile #overview form .input {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main .profile-page .container .content .right-profile #overview form .input .name, main .profile-page .container .content .right-profile #overview form .input .email {
+main .profile-page .container-profile .content .right-profile #overview form .input .name, main .profile-page .container-profile .content .right-profile #overview form .input .email {
   display: flex;
   flex-direction: column;
   gap: 0.4375rem;
 }
-main .profile-page .container .content .right-profile #overview form .input .name label, main .profile-page .container .content .right-profile #overview form .input .email label {
-  font-family: var(--f-body);
+main .profile-page .container-profile .content .right-profile #overview form .input .name label, main .profile-page .container-profile .content .right-profile #overview form .input .email label {
   color: #000;
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
 }
-main .profile-page .container .content .right-profile #overview form .input .name input, main .profile-page .container .content .right-profile #overview form .input .email input {
-  width: 54.375rem;
+main .profile-page .container-profile .content .right-profile #overview form .input .name input, main .profile-page .container-profile .content .right-profile #overview form .input .email input {
+  width: inherit;
   height: 3rem;
   padding-left: 1.875rem;
   border-radius: 0.625rem;
   background: var(--Light-Neutral-Secondary, #F0F1F2);
   border: 0.0625rem solid #F0F1F2;
 }
-main .profile-page .container .content .right-profile #overview form .input .name input:focus, main .profile-page .container .content .right-profile #overview form .input .email input:focus {
-  border: 0.0625rem solid #ED1E29;
+main .profile-page .container-profile .content .right-profile #overview form .input .name input:focus, main .profile-page .container-profile .content .right-profile #overview form .input .email input:focus {
+  border: 0.0625rem solid var(--black);
 }
-main .profile-page .container .content .right-profile #overview form .button {
+main .profile-page .container-profile .content .right-profile #overview form .button {
   display: flex;
   justify-content: end;
 }
-main .profile-page .container .content .right-profile #overview form .button button {
-  font-family: var(--f-body);
+main .profile-page .container-profile .content .right-profile #overview form .button button {
   color: var(--white);
   font-size: 1rem;
   font-weight: 500;
@@ -1870,51 +2971,62 @@ main .profile-page .container .content .right-profile #overview form .button but
   margin-top: 3.75rem;
   background: var(--Primary-Color-500, #ED1E29);
 }
-main .profile-page .container .content .right-profile #profile {
+main .profile-page .container-profile .content .right-profile #profile {
   padding: 3.125rem 3rem 3rem 1.875rem;
   overflow: auto;
+}
+main .profile-page .container-profile .content .right-profile #profile form {
   display: flex;
   gap: 3.125rem;
+  width: 100%;
 }
-main .profile-page .container .content .right-profile #profile .avatar {
+main .profile-page .container-profile .content .right-profile #profile form .form-left {
   width: 7.875rem;
-  height: 7.875rem;
-}
-main .profile-page .container .content .right-profile #profile .avatar img {
   border-radius: 7.875rem;
 }
-main .profile-page .container .content .right-profile #profile form {
-  width: 46.25rem;
+main .profile-page .container-profile .content .right-profile #profile form .form-left label {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
 }
-main .profile-page .container .content .right-profile #profile form .title h3 {
+main .profile-page .container-profile .content .right-profile #profile form .form-left label img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+main .profile-page .container-profile .content .right-profile #profile form .form-left #avatar-file {
+  display: none;
+}
+main .profile-page .container-profile .content .right-profile #profile form .form-right {
+  width: 100%;
+}
+main .profile-page .container-profile .content .right-profile #profile form .form-right .title h3 {
   color: #000;
-  font-family: var(--f-body);
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2rem;
 }
-main .profile-page .container .content .right-profile #profile form .input {
+main .profile-page .container-profile .content .right-profile #profile form .form-right .input {
   width: inherit;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
 }
-main .profile-page .container .content .right-profile #profile form .input .name, main .profile-page .container .content .right-profile #profile form .input .nick-name, main .profile-page .container .content .right-profile #profile form .input .birthday, main .profile-page .container .content .right-profile #profile form .input .sex {
+main .profile-page .container-profile .content .right-profile #profile form .form-right .input .name, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .nick-name, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .birthday, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .sex {
   display: flex;
   flex-direction: column;
   gap: 0.4375rem;
 }
-main .profile-page .container .content .right-profile #profile form .input .name label, main .profile-page .container .content .right-profile #profile form .input .nick-name label, main .profile-page .container .content .right-profile #profile form .input .birthday label, main .profile-page .container .content .right-profile #profile form .input .sex label {
+main .profile-page .container-profile .content .right-profile #profile form .form-right .input .name label, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .nick-name label, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .birthday label, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .sex label {
   color: #000;
-  font-family: var(--f-body);
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
 }
-main .profile-page .container .content .right-profile #profile form .input .name label span, main .profile-page .container .content .right-profile #profile form .input .nick-name label span, main .profile-page .container .content .right-profile #profile form .input .birthday label span, main .profile-page .container .content .right-profile #profile form .input .sex label span {
+main .profile-page .container-profile .content .right-profile #profile form .form-right .input .name label span, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .nick-name label span, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .birthday label span, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .sex label span {
   color: #ED1E29;
 }
-main .profile-page .container .content .right-profile #profile form .input .name input, main .profile-page .container .content .right-profile #profile form .input .name select, main .profile-page .container .content .right-profile #profile form .input .nick-name input, main .profile-page .container .content .right-profile #profile form .input .nick-name select, main .profile-page .container .content .right-profile #profile form .input .birthday input, main .profile-page .container .content .right-profile #profile form .input .birthday select, main .profile-page .container .content .right-profile #profile form .input .sex input, main .profile-page .container .content .right-profile #profile form .input .sex select {
+main .profile-page .container-profile .content .right-profile #profile form .form-right .input .name input, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .name select, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .nick-name input, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .nick-name select, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .birthday input, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .birthday select, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .sex input, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .sex select {
   width: inherit;
   height: 3rem;
   padding-left: 1.875rem;
@@ -1923,27 +3035,45 @@ main .profile-page .container .content .right-profile #profile form .input .name
   background: var(--Light-Neutral-Secondary, #F0F1F2);
   border: 0.0625rem solid #F0F1F2;
 }
-main .profile-page .container .content .right-profile #profile form .input .name input:focus, main .profile-page .container .content .right-profile #profile form .input .name select:focus, main .profile-page .container .content .right-profile #profile form .input .nick-name input:focus, main .profile-page .container .content .right-profile #profile form .input .nick-name select:focus, main .profile-page .container .content .right-profile #profile form .input .birthday input:focus, main .profile-page .container .content .right-profile #profile form .input .birthday select:focus, main .profile-page .container .content .right-profile #profile form .input .sex input:focus, main .profile-page .container .content .right-profile #profile form .input .sex select:focus {
-  border: 0.0625rem solid #ED1E29;
+main .profile-page .container-profile .content .right-profile #profile form .form-right .input .name input:focus, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .name select:focus, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .nick-name input:focus, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .nick-name select:focus, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .birthday input:focus, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .birthday select:focus, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .sex input:focus, main .profile-page .container-profile .content .right-profile #profile form .form-right .input .sex select:focus {
+  border: 0.0625rem solid var(--black);
 }
-main .profile-page .container .content .right-profile #password {
+main .profile-page .container-profile .content .right-profile #profile form .form-right .button {
+  display: flex;
+  justify-content: end;
+}
+main .profile-page .container-profile .content .right-profile #profile form .form-right .button button {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 6.25rem;
+  margin-top: 3.75rem;
+  background: var(--Primary-Color-500, #ED1E29);
+}
+main .profile-page .container-profile .content .right-profile #password {
   padding: 2.5625rem 3rem 3rem 4.1875rem;
   overflow: auto;
 }
-main .profile-page .container .content .right-profile #password form .input {
+main .profile-page .container-profile .content .right-profile #password form .input {
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   gap: 1.0625rem;
 }
-main .profile-page .container .content .right-profile #password form .input label {
+main .profile-page .container-profile .content .right-profile #password form .input > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+}
+main .profile-page .container-profile .content .right-profile #password form .input label {
   color: #000;
-  font-family: var(--f-body);
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
 }
-main .profile-page .container .content .right-profile #password form .input input {
+main .profile-page .container-profile .content .right-profile #password form .input input {
   width: inherit;
   height: 3rem;
   padding-left: 1.875rem;
@@ -1952,10 +3082,192 @@ main .profile-page .container .content .right-profile #password form .input inpu
   background: var(--Light-Neutral-Secondary, #F0F1F2);
   border: 0.0625rem solid #F0F1F2;
 }
-main .profile-page .container .content .right-profile #experience {
-  width: inherit;
-  padding: 3.125rem;
+main .profile-page .container-profile .content .right-profile #password form .input input:focus {
+  border: 0.0625rem solid var(--black);
+}
+main .profile-page .container-profile .content .right-profile #password form .button {
+  display: flex;
+  justify-content: end;
+}
+main .profile-page .container-profile .content .right-profile #password form .button button {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 0.5rem 2rem;
+  border-radius: 6.25rem;
+  margin-top: 3.75rem;
+  background: var(--Primary-Color-500, #ED1E29);
+}
+main .profile-page .container-profile .content .right-profile #experience {
+  height: 39.375rem;
+  padding: 3.125rem 5.625rem 3.125rem 3.125rem;
   overflow: auto;
+  font-family: var(--f-body);
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience .child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience .job-and-date {
+  display: flex;
+  justify-content: space-between;
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience .job-and-date h4 {
+  color: var(--black);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience .job-and-date p {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience .position {
+  display: flex;
+  gap: 0.625rem;
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience .position h5 {
+  color: #BD0F18;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience .position p {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .profile-page .container-profile .content .right-profile #experience .list-experience .description ul {
+  list-style: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+main .profile-page .container-profile .content .right-profile #experience #tab-add-experience {
+  display: flex;
+  align-items: center;
+  gap: 0.9375rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+main .profile-page .container-profile .content .right-profile #experience #tab-add-experience p {
+  display: flex;
+  color: #ED1E29;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form {
+  max-height: 39.375rem;
+  overflow: auto;
+  padding: 3.125rem;
+  font-family: var(--f-body);
+}
+main .profile-page .container-profile .content .right-profile #experience-form h3 {
+  color: #000;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+  margin-bottom: 1.375rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form {
+  position: relative;
+  margin-bottom: 5.9375rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form label {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .workplace {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .workplace input {
+  padding-left: 1.875rem;
+  height: 3rem;
+  border-radius: 0.625rem;
+  border: 1px solid #F0F1F2;
+  background: var(--Light-Neutral-Secondary, #F0F1F2);
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .position-and-date {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .position-and-date .position {
+  width: 40%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .position-and-date .position input {
+  padding-left: 1.875rem;
+  height: 3rem;
+  border-radius: 0.625rem;
+  border: 1px solid #F0F1F2;
+  background: var(--Light-Neutral-Secondary, #F0F1F2);
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .position-and-date .date {
+  width: 60%;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .position-and-date .date .group-date {
+  display: flex;
+  gap: 0.25rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .position-and-date .date .group-date input {
+  padding: 0 1.875rem;
+  width: 50%;
+  height: 3rem;
+  border-radius: 0.625rem;
+  border: 1px solid #F0F1F2;
+  background: var(--Light-Neutral-Secondary, #F0F1F2);
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .mission {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4375rem;
+}
+main .profile-page .container-profile .content .right-profile #experience-form form .mission > textarea {
+  padding: 1.875rem;
+  width: inherit !important;
+  max-height: 8.125rem !important;
+  overflow: auto;
+  border-radius: 0.625rem;
+  border: 1px solid #F0F1F2;
+  background: var(--Light-Neutral-Secondary, #F0F1F2);
+}
+main .profile-page .container-profile .content .right-profile #experience-form form button {
+  position: absolute;
+  right: 0;
+  bottom: -6rem;
+  width: 17.625rem;
+  height: 2.875rem;
+  padding: 0.5rem 2rem;
+  border-radius: 6.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--white);
+  background: var(--Primary-Color-500, #ED1E29);
 }
 
 footer .footer-wrapper {
@@ -2173,6 +3485,7 @@ footer .footer-wrapper .footer-col-4 form button {
   height: 2.75rem;
   width: 6.75rem;
   background-color: #ED1E29;
+  font-family: var(--f-body);
   color: var(--white);
   font-size: 0.875rem;
   border-radius: 3.125rem;

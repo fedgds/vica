@@ -2,6 +2,7 @@
 <main>
     <section class="login-page">
         <div class="left">
+            <div class="background"></div>
             <div class="container">
                 <div class="title">
                     <h2>Đăng nhập</h2>

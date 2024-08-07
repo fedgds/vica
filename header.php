@@ -42,16 +42,16 @@
                     </form>
                 </div>
                 <a class="contact" href="#">Liên hệ</a>
-                <a class="sign-in" href="#">Đăng nhập</a>
+                <a class="sign-in" href="http://localhost/project-vica/login.php">Đăng nhập</a>
             </div>
             <div class="logo-container">
-                <a href=""><img src="asset/image/logo.png" alt="VICA Logo" class="logo"></a>
+                <a href="http://localhost/project-vica"><img src="asset/image/logo.png" alt="VICA Logo" class="logo"></a>
             </div>
             <div class="header-bottom">
                 <nav>
                     <ul class="nav-menu">
-                        <li><a class="active" href="#">Giới thiệu</a></li>
-                        <li><a href="#">Hội viên</a></li>
+                        <li><a class="active" href="http://localhost/project-vica/about.php">Giới thiệu</a></li>
+                        <li><a href="http://localhost/project-vica/member.php">Hội viên</a></li>
                         <li><a href="#">Đào tạo</a></li>
                         <li><a href="#">Cơ hội việc làm</a></li>
                         <li><a href="#">Dự án</a></li>

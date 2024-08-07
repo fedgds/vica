@@ -595,60 +595,91 @@
                     <h2>Đối tác của chúng tôi</h2>
                 </div>
                 <div class="list-choose">
-                    <button class="active">Đối tác bạch kim </button>
-                    <button>Đối tác cao cấp</button>
-                    <button>Đối tác hợp tác</button>
-                    <button>Đối tác truyền thông</button>
+                    <nav>
+                        <ul>
+                            <li id="tab-platinum" class="active">Đối tác bạch kim</li>
+                            <li id="tab-vip">Đối tác cao cấp</li>
+                            <li id="tab-cooperate">Đối tác hợp tác</li>
+                            <li id="tab-media">Đối tác truyền thông</li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="list-partner">
-                    <div class="image">
-                        <img src="asset/image/partner1.png" alt="">
+                    <div id="partner-platinum" class="child active">
+                        <div class="image">
+                            <img src="asset/image/partner1.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner2.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner3.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner4.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner5.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner6.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner7.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner8.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner9.png" alt="">
+                        </div>
                     </div>
-                    <div class="image">
-                        <img src="asset/image/partner2.png" alt="">
+                    <div id="partner-vip" class="child">
+                        <div class="image">
+                            <img src="asset/image/partner1.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner2.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner3.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner4.png" alt="">
+                        </div>
                     </div>
-                    <div class="image">
-                        <img src="asset/image/partner3.png" alt="">
+                    <div id="partner-cooperate" class="child">
+                        <div class="image">
+                            <img src="asset/image/partner5.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner3.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner8.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner4.png" alt="">
+                        </div>
                     </div>
-                    <div class="image">
-                        <img src="asset/image/partner4.png" alt="">
-                    </div>
-                    <div class="image">
-                        <img src="asset/image/partner5.png" alt="">
-                    </div>
-                    <div class="image">
-                        <img src="asset/image/partner6.png" alt="">
-                    </div>
-                    <div class="image">
-                        <img src="asset/image/partner7.png" alt="">
-                    </div>
-                    <div class="image">
-                        <img src="asset/image/partner8.png" alt="">
-                    </div>
-                    <div class="image">
-                        <img src="asset/image/partner9.png" alt="">
+                    <div id="partner-media" class="child">
+                        <div class="image">
+                            <img src="asset/image/partner1.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner7.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner9.png" alt="">
+                        </div>
+                        <div class="image">
+                            <img src="asset/image/partner6.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <section class="section-8-homepage">
-        <div class="container">
-            <div class="left">
-                <div class="title">
-                    <h2>Hãy đóng góp cho quỹ hỗ trợ phát triển nghề bếp</h2>
-                </div>
-                <div class="description">
-                    <p>Lorem ipsum dolor sit amet consectetur. Tristique semper pharetra condimentum et augue ornare quis. Turpis ut ut scelerisque eleifend sapien mi ipsum. </p>
-                </div>
-                <div class="button">
-                    <a href="">Đóng góp ngay</a>
-                </div>
-            </div>
-            <div class="right">
-                <div class="image"></div>
-            </div>
-        </div>
-    </section>
+    <?php include('section/section-8-homepage.php') ?>
 </main>
 <?php include('footer.php') ?>

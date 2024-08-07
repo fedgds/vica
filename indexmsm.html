@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Tabs</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            border-right: 1px solid #ddd;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .sidebar ul li.active {
+            background-color: #f8d7da;
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .content {
+            padding: 20px;
+            flex-grow: 1;
+        }
+        .content div {
+            display: none;
+        }
+        .content div.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="sidebar">
+        <ul>
+            <li onclick="showContent('profile')" class="active">Chỉnh sửa hồ sơ</li>
+            <li onclick="showContent('password')">Mật khẩu</li>
+            <li onclick="showContent('experience')">Kinh nghiệm làm việc</li>
+        </ul>
+    </div>
+    <div class="content">
+        <div id="profile" class="active">Nội dung chỉnh sửa hồ sơ</div>
+        <div id="password">Nội dung mật khẩu</div>
+        <div id="experience">Nội dung kinh nghiệm làm việc</div>
+        <video src="asset/image/video-banner.mp4"></video>
+        <video autoplay>
+            <source src="asset/image/video-banner.mp4" type="video/mp4">
+            <!-- <source src="movie.ogg" type="video/ogg"> -->
+            Your browser does not support the video tag.
+          </video>
+    </div>
+</div>
+
+<script>
+function showContent(contentId) {
+    // Remove active class from all list items
+    document.querySelectorAll('.sidebar ul li').forEach(function(li) {
+        li.classList.remove('active');
+    });
+
+    // Add active class to the clicked list item
+    event.target.classList.add('active');
+
+    // Hide all content divs
+    document.querySelectorAll('.content div').forEach(function(div) {
+        div.classList.remove('active');
+    });
+
+    // Show the selected content div
+    document.getElementById(contentId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
