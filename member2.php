@@ -120,8 +120,8 @@
                             </div>
                         </div>
                         <div class="line-9">
-                            <input type="checkbox">
-                            <p>Tôi đã đọc và đồng ý với <span>quy chế của Hiệp Hội</span></p>
+                            <input type="checkbox" id="confirm">
+                            <label for="confirm">Tôi đã đọc và đồng ý với <span>quy chế của Hiệp Hội</span></label>
                         </div>
                     </div>
                     <div id="form-business-member" class="child">
@@ -264,8 +264,8 @@
                                     </div>
                                 </div>
                                 <div class="line-7">
-                                    <input type="checkbox">
-                                    <p>Tôi đã đọc và đồng ý với <span>quy chế của Hiệp Hội</span></p>
+                                    <input type="checkbox" id="confirm">
+                                    <label for="confirm">Tôi đã đọc và đồng ý với <span>quy chế của Hiệp Hội</span></label>
                                 </div>
                             </div>
                         </div>

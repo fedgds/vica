@@ -8,6 +8,55 @@
   --black: #303030;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  opacity: 0.8;
+  background: #000;
+  z-index: 9990;
+  display: none;
+}
+.backdrop.show {
+  display: block;
+}
+
+.pagination {
+  font-family: var(--f-body);
+  display: flex;
+}
+.pagination ul {
+  display: flex;
+  gap: 0.6875rem;
+}
+.pagination li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.25rem;
+  color: var(--black);
+  font-size: 0.875rem;
+  font-weight: 31.25rem;
+  line-height: 1.3125rem;
+  border: 1px solid var(--Primary-Color-50, #FDE7E8);
+  background: var(--HEADER, #FFF);
+}
+.pagination li a {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pagination li.active, .pagination li:hover {
+  background: var(--Primary-Color-500, #ED1E29);
+  color: var(--white);
+}
+
 header .header-wrapper {
   position: fixed;
   top: 0;
@@ -354,19 +403,6 @@ header .header-mobile .icon svg {
   width: inherit;
   height: inherit;
   color: var(--red);
-}
-header .backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 9996;
-  display: none;
-}
-header .backdrop.show {
-  display: block;
 }
 header .menu-mobile {
   position: fixed;
@@ -1300,6 +1336,7 @@ main .section-8-homepage {
   background-color: rgba(250, 240, 202, 0.4);
 }
 main .section-8-homepage .container {
+  font-family: var(--f-body);
   width: 85.5rem;
   z-index: 10;
   position: relative;
@@ -1317,7 +1354,6 @@ main .section-8-homepage .container .left .title h2 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 2.875rem;
-  font-family: var(--f-body);
 }
 main .section-8-homepage .container .left .description {
   width: 32.75rem;
@@ -1362,10 +1398,10 @@ main .section-8-homepage .container .right .image {
   z-index: 990;
   background: url("../image/section8.png") 100%/cover no-repeat;
 }
-main .section-banner-about, main .section-banner-member {
+main .section-banner-about, main .section-banner-member, main .section-banner-training, main .section-recruitment {
   position: relative;
 }
-main .section-banner-about .background, main .section-banner-member .background {
+main .section-banner-about .background, main .section-banner-member .background, main .section-banner-training .background, main .section-recruitment .background {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -1377,15 +1413,15 @@ main .section-banner-about .background, main .section-banner-member .background 
   background: linear-gradient(270deg, rgba(142, 11, 18, 0) 0%, #000 100%);
   z-index: 10;
 }
-main .section-banner-about .content, main .section-banner-member .content {
+main .section-banner-about .content, main .section-banner-member .content, main .section-banner-training .content, main .section-recruitment .content {
   position: relative;
   width: inherit;
 }
-main .section-banner-about .content img, main .section-banner-member .content img {
+main .section-banner-about .content img, main .section-banner-member .content img, main .section-banner-training .content img, main .section-recruitment .content img {
   height: inherit;
   margin-top: 3.75rem;
 }
-main .section-banner-about .content .text, main .section-banner-member .content .text {
+main .section-banner-about .content .text, main .section-banner-member .content .text, main .section-banner-training .content .text, main .section-recruitment .content .text {
   font-family: var(--f-body);
   color: var(--white);
   position: absolute;
@@ -1396,134 +1432,134 @@ main .section-banner-about .content .text, main .section-banner-member .content 
   gap: 1rem;
   z-index: 90;
 }
-main .section-banner-about .content .text .text-title h1, main .section-banner-member .content .text .text-title h1 {
+main .section-banner-about .content .text .text-title h1, main .section-banner-member .content .text .text-title h1, main .section-banner-training .content .text .text-title h1, main .section-recruitment .content .text .text-title h1 {
   font-size: 2.5rem;
   font-weight: 700;
   line-height: 3.75rem;
 }
-main .section-banner-about .content .text .bot, main .section-banner-member .content .text .bot {
+main .section-banner-about .content .text .bot, main .section-banner-member .content .text .bot, main .section-banner-training .content .text .bot, main .section-recruitment .content .text .bot {
   display: flex;
   gap: 1.25rem;
 }
-main .section-banner-about .content .text .bot a, main .section-banner-member .content .text .bot a {
+main .section-banner-about .content .text .bot a, main .section-banner-member .content .text .bot a, main .section-banner-training .content .text .bot a, main .section-recruitment .content .text .bot a {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5rem;
 }
-main .section-banner-about .content .text .bot span, main .section-banner-member .content .text .bot span {
+main .section-banner-about .content .text .bot span, main .section-banner-member .content .text .bot span, main .section-banner-training .content .text .bot span, main .section-recruitment .content .text .bot span {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
 }
-main .container-about, main .container-member {
+main .container-about, main .container-member, main .container-training, main .container-detail-training, main .container-recruitment, main .container-detail-recruitment {
   width: 85.5rem;
   display: flex;
   gap: 3.4375rem;
 }
-main .container-about .left, main .container-member .left {
+main .container-about .left, main .container-member .left, main .container-training .left, main .container-detail-training .left, main .container-recruitment .left, main .container-detail-recruitment .left {
   width: 61.25rem;
 }
-main .container-about .right, main .container-member .right {
+main .container-about .right, main .container-member .right, main .container-training .right, main .container-detail-training .right, main .container-recruitment .right, main .container-detail-recruitment .right {
   width: 20.375rem;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
-main .container-about .right .categoty-content, main .container-member .right .categoty-content {
+main .container-about .right .categoty-content, main .container-member .right .categoty-content, main .container-training .right .categoty-content, main .container-detail-training .right .categoty-content, main .container-recruitment .right .categoty-content, main .container-detail-recruitment .right .categoty-content {
   font-family: var(--f-body);
   color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
   width: 13.4375rem;
   height: 19.0625rem;
-  padding: 2.5rem;
+  padding: 2.5rem 4.25rem 2.5rem 2.5rem;
   margin-bottom: 2.5rem;
   border-radius: 0.625rem;
   background-color: var(--white);
   box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(21, 21, 21, 0.1);
 }
-main .container-about .right .categoty-content .title, main .container-member .right .categoty-content .title {
+main .container-about .right .categoty-content .title, main .container-member .right .categoty-content .title, main .container-training .right .categoty-content .title, main .container-detail-training .right .categoty-content .title, main .container-recruitment .right .categoty-content .title, main .container-detail-recruitment .right .categoty-content .title {
   padding-bottom: 0.875rem;
   margin-bottom: 1.25rem;
   border-bottom: 0.0625rem solid #BD0F18;
 }
-main .container-about .right .categoty-content .title h3, main .container-member .right .categoty-content .title h3 {
+main .container-about .right .categoty-content .title h3, main .container-member .right .categoty-content .title h3, main .container-training .right .categoty-content .title h3, main .container-detail-training .right .categoty-content .title h3, main .container-recruitment .right .categoty-content .title h3, main .container-detail-recruitment .right .categoty-content .title h3 {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.6875rem;
 }
-main .container-about .right .categoty-content nav ul, main .container-member .right .categoty-content nav ul {
+main .container-about .right .categoty-content nav ul, main .container-member .right .categoty-content nav ul, main .container-training .right .categoty-content nav ul, main .container-detail-training .right .categoty-content nav ul, main .container-recruitment .right .categoty-content nav ul, main .container-detail-recruitment .right .categoty-content nav ul {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-main .container-about .right .categoty-content nav ul li, main .container-member .right .categoty-content nav ul li {
+main .container-about .right .categoty-content nav ul li, main .container-member .right .categoty-content nav ul li, main .container-training .right .categoty-content nav ul li, main .container-detail-training .right .categoty-content nav ul li, main .container-recruitment .right .categoty-content nav ul li, main .container-detail-recruitment .right .categoty-content nav ul li {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
 }
-main .container-about .right .categoty-content nav ul li.active, main .container-about .right .categoty-content nav ul li:hover, main .container-member .right .categoty-content nav ul li.active, main .container-member .right .categoty-content nav ul li:hover {
+main .container-about .right .categoty-content nav ul li.active, main .container-about .right .categoty-content nav ul li:hover, main .container-member .right .categoty-content nav ul li.active, main .container-member .right .categoty-content nav ul li:hover, main .container-training .right .categoty-content nav ul li.active, main .container-training .right .categoty-content nav ul li:hover, main .container-detail-training .right .categoty-content nav ul li.active, main .container-detail-training .right .categoty-content nav ul li:hover, main .container-recruitment .right .categoty-content nav ul li.active, main .container-recruitment .right .categoty-content nav ul li:hover, main .container-detail-recruitment .right .categoty-content nav ul li.active, main .container-detail-recruitment .right .categoty-content nav ul li:hover {
   color: var(--Primary-Color-500, #ED1E29);
   font-size: 1rem;
   line-height: 1.5rem;
 }
-main .container-about .right .popular-news, main .container-member .right .popular-news {
+main .container-about .right .popular-news, main .container-member .right .popular-news, main .container-training .right .popular-news, main .container-detail-training .right .popular-news, main .container-recruitment .right .popular-news, main .container-detail-recruitment .right .popular-news {
   font-family: var(--f-body);
   color: var(--black);
 }
-main .container-about .right .popular-news .title, main .container-member .right .popular-news .title {
+main .container-about .right .popular-news .title, main .container-member .right .popular-news .title, main .container-training .right .popular-news .title, main .container-detail-training .right .popular-news .title, main .container-recruitment .right .popular-news .title, main .container-detail-recruitment .right .popular-news .title {
   margin-bottom: 1.875rem;
 }
-main .container-about .right .popular-news .title h3, main .container-member .right .popular-news .title h3 {
+main .container-about .right .popular-news .title h3, main .container-member .right .popular-news .title h3, main .container-training .right .popular-news .title h3, main .container-detail-training .right .popular-news .title h3, main .container-recruitment .right .popular-news .title h3, main .container-detail-recruitment .right .popular-news .title h3 {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2rem;
 }
-main .container-about .right .popular-news .list-news, main .container-member .right .popular-news .list-news {
+main .container-about .right .popular-news .list-news, main .container-member .right .popular-news .list-news, main .container-training .right .popular-news .list-news, main .container-detail-training .right .popular-news .list-news, main .container-recruitment .right .popular-news .list-news, main .container-detail-recruitment .right .popular-news .list-news {
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
 }
-main .container-about .right .popular-news .list-news .child, main .container-member .right .popular-news .list-news .child {
+main .container-about .right .popular-news .list-news .child, main .container-member .right .popular-news .list-news .child, main .container-training .right .popular-news .list-news .child, main .container-detail-training .right .popular-news .list-news .child, main .container-recruitment .right .popular-news .list-news .child, main .container-detail-recruitment .right .popular-news .list-news .child {
   font-family: var(--f-body);
   display: flex;
   gap: 1.25rem;
   height: 6.625rem;
 }
-main .container-about .right .popular-news .list-news .child img, main .container-member .right .popular-news .list-news .child img {
+main .container-about .right .popular-news .list-news .child img, main .container-member .right .popular-news .list-news .child img, main .container-training .right .popular-news .list-news .child img, main .container-detail-training .right .popular-news .list-news .child img, main .container-recruitment .right .popular-news .list-news .child img, main .container-detail-recruitment .right .popular-news .list-news .child img {
   width: 6.75rem;
   height: inherit;
   border-radius: 0.5rem;
 }
-main .container-about .right .popular-news .list-news .child .infor, main .container-member .right .popular-news .list-news .child .infor {
+main .container-about .right .popular-news .list-news .child .infor, main .container-member .right .popular-news .list-news .child .infor, main .container-training .right .popular-news .list-news .child .infor, main .container-detail-training .right .popular-news .list-news .child .infor, main .container-recruitment .right .popular-news .list-news .child .infor, main .container-detail-recruitment .right .popular-news .list-news .child .infor {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main .container-about .right .popular-news .list-news .child .infor .title-news, main .container-member .right .popular-news .list-news .child .infor .title-news {
+main .container-about .right .popular-news .list-news .child .infor .title-news, main .container-member .right .popular-news .list-news .child .infor .title-news, main .container-training .right .popular-news .list-news .child .infor .title-news, main .container-detail-training .right .popular-news .list-news .child .infor .title-news, main .container-recruitment .right .popular-news .list-news .child .infor .title-news, main .container-detail-recruitment .right .popular-news .list-news .child .infor .title-news {
   width: 12.375rem;
 }
-main .container-about .right .popular-news .list-news .child .infor .title-news h4, main .container-member .right .popular-news .list-news .child .infor .title-news h4 {
+main .container-about .right .popular-news .list-news .child .infor .title-news h4, main .container-member .right .popular-news .list-news .child .infor .title-news h4, main .container-training .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-training .right .popular-news .list-news .child .infor .title-news h4, main .container-recruitment .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-recruitment .right .popular-news .list-news .child .infor .title-news h4 {
   color: var(--black);
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5rem;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views, main .container-member .right .popular-news .list-news .child .infor .date-and-views {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views, main .container-member .right .popular-news .list-news .child .infor .date-and-views, main .container-training .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views {
   display: flex;
   gap: 0.5rem;
   font-size: 0.875rem;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views > p, main .container-member .right .popular-news .list-news .child .infor .date-and-views > p {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views > p, main .container-member .right .popular-news .list-news .child .infor .date-and-views > p, main .container-training .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views > p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views > p {
   color: #515151;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views .date, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .date, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date, main .container-training .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .date, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .date {
   display: flex;
   gap: 0.75rem;
   color: #ED1E29;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date p {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-training .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .date p {
   width: 5.3125rem;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .views p {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-training .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .views p {
   color: #515151;
   width: 3.625rem;
 }
@@ -1975,8 +2011,8 @@ main .section-list-member .container-member .left form label svg {
   height: 1.2813rem;
 }
 main .section-list-member .container-member .left form input {
-  width: 45.875rem;
-  padding: 1.25rem 9.375rem 1.25rem 3.5rem;
+  width: calc(100% - 3.5rem);
+  padding: 1.25rem 0 1.25rem 3.5rem;
   border-radius: 1.875rem;
   border: 1px #EAEEF4;
   background: var(--HEADER, #FFF);
@@ -1995,7 +2031,7 @@ main .section-list-member .container-member .left form input::placeholder {
   line-height: 1.5rem;
 }
 main .section-list-member .container-member .left form button {
-  padding: 0.5rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 6.25rem;
   background: var(--Primary-Color-500, #ED1E29);
   border: 1px solid #ED1E29;
@@ -2004,8 +2040,8 @@ main .section-list-member .container-member .left form button {
   font-weight: 700;
   line-height: 1.5rem;
   position: absolute;
-  top: 0.625rem;
-  right: 2.5rem;
+  top: 5px;
+  right: 0.625rem;
 }
 main .section-list-member .container-member .left form button:hover {
   border: 1px solid #ED1E29;
@@ -2050,40 +2086,6 @@ main .section-list-member .container-member .left .business-member .link:hover, 
 main .section-list-member .container-member .left .business-member .link:hover a, main .section-list-member .container-member .left .individual-member .link:hover a {
   color: var(--white);
 }
-main .section-list-member .container-member .left .business-member .pagination, main .section-list-member .container-member .left .individual-member .pagination {
-  font-family: var(--f-body);
-  display: flex;
-  justify-content: center;
-}
-main .section-list-member .container-member .left .business-member .pagination ul, main .section-list-member .container-member .left .individual-member .pagination ul {
-  display: flex;
-  gap: 0.6875rem;
-}
-main .section-list-member .container-member .left .business-member .pagination li, main .section-list-member .container-member .left .individual-member .pagination li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: 0.25rem;
-  color: var(--black);
-  font-size: 0.875rem;
-  font-weight: 31.25rem;
-  line-height: 1.3125rem;
-  border: 1px solid var(--Primary-Color-50, #FDE7E8);
-  background: var(--HEADER, #FFF);
-}
-main .section-list-member .container-member .left .business-member .pagination li a, main .section-list-member .container-member .left .individual-member .pagination li a {
-  width: inherit;
-  height: inherit;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main .section-list-member .container-member .left .business-member .pagination li.active, main .section-list-member .container-member .left .business-member .pagination li:hover, main .section-list-member .container-member .left .individual-member .pagination li.active, main .section-list-member .container-member .left .individual-member .pagination li:hover {
-  background: var(--Primary-Color-500, #ED1E29);
-  color: var(--white);
-}
 main .section-list-member .container-member .left .business-member {
   margin-bottom: 3.25rem;
 }
@@ -2119,6 +2121,9 @@ main .section-list-member .container-member .left .business-member .list-member 
   font-weight: 600;
   line-height: 1.6875rem;
 }
+main .section-list-member .container-member .left .business-member .pagination {
+  justify-content: center;
+}
 main .section-list-member .container-member .left .individual-member .list-member {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -2149,6 +2154,9 @@ main .section-list-member .container-member .left .individual-member .list-membe
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.6875rem;
+}
+main .section-list-member .container-member .left .individual-member .pagination {
+  justify-content: center;
 }
 main .section-rights-member {
   margin-top: 6.25rem;
@@ -2345,14 +2353,14 @@ main .section-subscribe-member .container-member .left .form-subscribe #form-ind
   width: 1.5rem;
   height: 1.5rem;
 }
-main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-9 p {
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-9 label {
   margin-top: 0.125rem;
   color: var(--black);
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.375rem;
 }
-main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-9 p span {
+main .section-subscribe-member .container-member .left .form-subscribe #form-individual-member .line-9 label span {
   color: #0078FF;
 }
 main .section-subscribe-member .container-member .left .form-subscribe #form-business-member {
@@ -2399,14 +2407,14 @@ main .section-subscribe-member .container-member .left .form-subscribe #form-bus
   width: 1.5rem;
   height: 1.5rem;
 }
-main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-7 p {
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-7 label {
   margin-top: 0.125rem;
   color: var(--black);
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.375rem;
 }
-main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-7 p span {
+main .section-subscribe-member .container-member .left .form-subscribe #form-business-member .group-2 .line-7 label span {
   color: #0078FF;
 }
 main .section-subscribe-member .container-member .left .form-subscribe .button {
@@ -2424,6 +2432,1228 @@ main .section-subscribe-member .container-member .left .form-subscribe .button b
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.5rem;
+}
+main .section-list-training {
+  margin-top: 6.25rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-list-training .container-training {
+  gap: 5rem !important;
+}
+main .section-list-training .container-training .left {
+  width: 60.25rem;
+}
+main .section-list-training .container-training .left form {
+  font-family: var(--f-body);
+  position: relative;
+  width: inherit;
+}
+main .section-list-training .container-training .left form label {
+  position: absolute;
+  left: 1.625rem;
+  top: 1.25rem;
+}
+main .section-list-training .container-training .left form label svg {
+  width: 1.2813rem;
+  height: 1.2813rem;
+}
+main .section-list-training .container-training .left form input {
+  width: calc(100% - 3.5rem);
+  padding: 1.25rem 0 1.25rem 3.5rem;
+  border-radius: 1.875rem;
+  border: 1px #EAEEF4;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 4px 20px 0px rgba(21, 21, 21, 0.1);
+}
+main .section-list-training .container-training .left form input::-moz-placeholder {
+  color: var(--Neutral-1, #898A8D);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-list-training .container-training .left form input::placeholder {
+  color: var(--Neutral-1, #898A8D);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-list-training .container-training .left form button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6.25rem;
+  background: var(--Primary-Color-500, #ED1E29);
+  border: 1px solid #ED1E29;
+  color: var(--Text-White, var(--HEADER, #FFF));
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  position: absolute;
+  top: 5px;
+  right: 0.625rem;
+}
+main .section-list-training .container-training .left form button:hover {
+  border: 1px solid #ED1E29;
+  color: #ED1E29;
+  background-color: var(--white);
+}
+main .section-list-training .container-training .left .course {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1.5rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+main .section-list-training .container-training .left .course .child {
+  border-radius: 1rem;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 4px 20px 0px rgba(21, 21, 21, 0.1);
+}
+main .section-list-training .container-training .left .course .child img {
+  height: 21.25rem;
+  border-radius: 1rem 1rem 0 0;
+}
+main .section-list-training .container-training .left .course .child .content {
+  font-family: var(--f-body);
+  color: var(--black);
+  padding: 1rem 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+main .section-list-training .container-training .left .course .child .content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-list-training .container-training .left .course .child .content .journey, main .section-list-training .container-training .left .course .child .content .trainer {
+  display: flex;
+  gap: 0.25rem;
+}
+main .section-list-training .container-training .left .course .child .content .journey p, main .section-list-training .container-training .left .course .child .content .trainer p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+main .section-list-training .container-training .left .course .child .content .journey b, main .section-list-training .container-training .left .course .child .content .trainer b {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-list-training .container-training .left .course .child .content .trainer {
+  flex-direction: column;
+}
+main .section-detail-training {
+  position: relative;
+  margin-top: 15rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-detail-training .form-subscribe {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  padding: 3.125rem 4.5rem;
+  top: 16.875rem;
+  width: 46.25rem;
+  border-radius: 1.25rem;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+main .section-detail-training .form-subscribe.show {
+  display: block;
+}
+main .section-detail-training .form-subscribe .content {
+  font-family: var(--f-body);
+  position: relative;
+}
+main .section-detail-training .form-subscribe .content .close {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.75rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.75rem;
+  border-radius: 100px;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+}
+main .section-detail-training .form-subscribe .content h2.title {
+  color: #1D1D1D;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 0.5rem;
+}
+main .section-detail-training .form-subscribe .content p.guide {
+  color: #1D1D1D;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 1.875rem;
+  width: 30.3125rem;
+}
+main .section-detail-training .form-subscribe .content .child-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.875rem;
+}
+main .section-detail-training .form-subscribe .content .child-input .section-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+main .section-detail-training .form-subscribe .content .child-input .section-input label {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 600px;
+  line-height: 1.5rem;
+}
+main .section-detail-training .form-subscribe .content .child-input .section-input input {
+  padding: 1rem 1.25rem;
+  border-radius: 0.625rem;
+  border: 1px solid var(--Primary-Color-500, #999);
+  background: var(--HEADER, #FFF);
+}
+main .section-detail-training .form-subscribe .content .child-input .section-input input::-moz-placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-detail-training .form-subscribe .content .child-input .section-input input::placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-detail-training .form-subscribe .content .child-input .section-input input:focus {
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+}
+main .section-detail-training .form-subscribe .content .child-input .line-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5625rem;
+}
+main .section-detail-training .form-subscribe .content .button {
+  display: flex;
+  justify-content: end;
+}
+main .section-detail-training .form-subscribe .content .button button {
+  padding: 0.75rem 2rem;
+  border-radius: 100px;
+  color: var(--white);
+  background: var(--Primary-Color-500, #ED1E29);
+  border: 1px solid #ED1E29;
+}
+main .section-detail-training .form-subscribe .content .button button:hover {
+  background-color: var(--white);
+  border: 1px solid #ED1E29;
+  color: #ED1E29;
+}
+main .section-detail-training .container-detail-training {
+  position: relative;
+  gap: 5rem !important;
+}
+main .section-detail-training .container-detail-training .bot {
+  font-family: var(--f-body);
+  position: absolute;
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-training .container-detail-training .bot a {
+  color: #4D4D4D;
+}
+main .section-detail-training .container-detail-training .bot a.active {
+  color: #ED1E29;
+}
+main .section-detail-training .container-detail-training .left {
+  margin-top: 4.5rem;
+  font-family: var(--f-body);
+  color: var(--black);
+}
+main .section-detail-training .container-detail-training .left .main-image {
+  width: inherit;
+  height: 24rem;
+  margin-bottom: 3rem;
+}
+main .section-detail-training .container-detail-training .left .main-image img {
+  width: inherit;
+  height: inherit;
+}
+main .section-detail-training .container-detail-training .left h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 1.5rem;
+}
+main .section-detail-training .container-detail-training .left .infor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section-detail-training .container-detail-training .left .infor .child {
+  display: flex;
+  gap: 0.125rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+main .section-detail-training .container-detail-training .left .infor .child p {
+  font-weight: 400;
+}
+main .section-detail-training .container-detail-training .left .infor .child b {
+  font-weight: 600;
+}
+main .section-detail-training .container-detail-training .left .infor .trainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+main .section-detail-training .container-detail-training .left .infor .trainer b {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 600;
+}
+main .section-detail-training .container-detail-training .left .infor .trainer .list-trainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+main .section-detail-training .container-detail-training .left .infor .trainer .list-trainer .child {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+main .section-detail-training .container-detail-training .left .infor .trainer .list-trainer .child .image {
+  width: 6.875rem;
+  height: 6.875rem;
+  padding: 0 1.25rem;
+}
+main .section-detail-training .container-detail-training .left .infor .trainer .list-trainer .child .image img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+main .section-detail-training .container-detail-training .left .infor .trainer .list-trainer .child .text {
+  text-align: center;
+}
+main .section-detail-training .container-detail-training .left .infor .trainer .list-trainer .child .text p {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3125rem;
+}
+main .section-detail-training .container-detail-training .left .description {
+  margin-bottom: 2.25rem;
+}
+main .section-detail-training .container-detail-training .left .description p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-training .container-detail-training .left .subscribe {
+  margin-bottom: 6.125rem;
+  height: 2.75rem;
+  padding: 2rem 1.6875rem;
+  background-color: #FCF7E4;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 20px 0px rgba(21, 21, 21, 0.1);
+}
+main .section-detail-training .container-detail-training .left .subscribe .content {
+  display: flex;
+  justify-content: space-between;
+}
+main .section-detail-training .container-detail-training .left .subscribe .content .text {
+  color: #4D4D4D;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  padding: 0.5rem 2rem;
+}
+main .section-detail-training .container-detail-training .left .subscribe .content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 3.125rem;
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+  background: var(--Primary-Color-500, #ED1E29);
+}
+main .section-detail-training .container-detail-training .left .subscribe .content button:hover {
+  color: #ED1E29;
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+  background: var(--Primary-Color-500, #fff);
+}
+main .section-detail-training .container-detail-training .left h2.title-list {
+  color: var(--black);
+  margin-bottom: 1.5625rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+}
+main .section-detail-training .container-detail-training .left .course {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1.5rem;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+}
+main .section-detail-training .container-detail-training .left .course .child {
+  border-radius: 1rem;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 4px 20px 0px rgba(21, 21, 21, 0.1);
+}
+main .section-detail-training .container-detail-training .left .course .child img {
+  height: 21.25rem;
+  border-radius: 1rem 1rem 0 0;
+}
+main .section-detail-training .container-detail-training .left .course .child .content {
+  font-family: var(--f-body);
+  color: var(--black);
+  padding: 1rem 1rem 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+main .section-detail-training .container-detail-training .left .course .child .content h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-detail-training .container-detail-training .left .course .child .content .journey, main .section-detail-training .container-detail-training .left .course .child .content .trainer {
+  display: flex;
+  gap: 0.25rem;
+}
+main .section-detail-training .container-detail-training .left .course .child .content .journey p, main .section-detail-training .container-detail-training .left .course .child .content .trainer p {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+main .section-detail-training .container-detail-training .left .course .child .content .journey b, main .section-detail-training .container-detail-training .left .course .child .content .trainer b {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-detail-training .container-detail-training .left .course .child .content .trainer {
+  flex-direction: column;
+}
+main .section-detail-training .container-detail-training .right {
+  margin-top: 4.5rem;
+}
+main .section-recruitment {
+  margin-top: 6.25rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-recruitment .container-recruitment {
+  gap: 9.1875rem !important;
+}
+main .section-recruitment .container-recruitment .left {
+  font-family: var(--f-body);
+}
+main .section-recruitment .container-recruitment .left .header {
+  margin-bottom: 1rem;
+}
+main .section-recruitment .container-recruitment .left .header h2 {
+  color: var(--black);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin-bottom: 0.5rem;
+}
+main .section-recruitment .container-recruitment .left .header p {
+  width: 42.375rem;
+  color: #000;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-recruitment .container-recruitment .left form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .section-recruitment .container-recruitment .left form .line .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .section-recruitment .container-recruitment .left form .line .form-group label {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-recruitment .container-recruitment .left form .line .form-group label span {
+  margin-left: 0.25rem;
+  color: var(--Primary-Color-500, #ED1E29);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-recruitment .container-recruitment .left form .line .form-group input, main .section-recruitment .container-recruitment .left form .line .form-group textarea, main .section-recruitment .container-recruitment .left form .line .form-group select {
+  max-width: inherit;
+  padding: 1rem 1.25rem;
+  border-radius: 0.625rem;
+  border: 1px solid var(--Text-400, #999);
+  background: var(--HEADER, #FFF);
+}
+main .section-recruitment .container-recruitment .left form .line .form-group input::-moz-placeholder, main .section-recruitment .container-recruitment .left form .line .form-group textarea::-moz-placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-recruitment .container-recruitment .left form .line .form-group input::placeholder, main .section-recruitment .container-recruitment .left form .line .form-group textarea::placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-recruitment .container-recruitment .left form .line .form-group input:focus, main .section-recruitment .container-recruitment .left form .line .form-group textarea:focus {
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+}
+main .section-recruitment .container-recruitment .left form .line .form-group textarea {
+  resize: none;
+  height: 6.25rem;
+  overflow: auto;
+}
+main .section-recruitment .container-recruitment .left form .line-1, main .section-recruitment .container-recruitment .left form .line-2, main .section-recruitment .container-recruitment .left form .line-3, main .section-recruitment .container-recruitment .left form .line-4, main .section-recruitment .container-recruitment .left form .line-5 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.875rem;
+}
+main .section-recruitment .container-recruitment .left form .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+main .section-recruitment .container-recruitment .left form .bottom .confirm {
+  display: flex;
+  gap: 0.875rem;
+}
+main .section-recruitment .container-recruitment .left form .bottom .confirm input {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+main .section-recruitment .container-recruitment .left form .bottom .confirm label {
+  color: var(--black);
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+  margin-top: 0.125rem;
+}
+main .section-recruitment .container-recruitment .left form .bottom button {
+  display: flex;
+  padding: 0.75rem 2rem;
+  gap: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6.25rem;
+  color: var(--Text-White, var(--HEADER, #FFF));
+  background: var(--Primary-Color-500, #ED1E29);
+  border: 1px solid #ED1E29;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+}
+main .section-list-recruitment {
+  margin-top: 6.25rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-list-recruitment .container-recruitment {
+  gap: 3.125rem !important;
+}
+main .section-list-recruitment .container-recruitment .left {
+  width: 62rem;
+  font-family: var(--f-body);
+}
+main .section-list-recruitment .container-recruitment .left .group-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 3.125rem;
+  height: 4rem;
+  padding: 0 0.5rem 0 1.625rem;
+  border-radius: 1.875rem;
+  border: 0.5px solid var(--Text-400, #999);
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 20px 60px 0px rgba(224, 161, 161, 0.05);
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item {
+  display: flex;
+  gap: 0.625rem;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item select {
+  border: none;
+  border-right: 1px solid #999;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item input {
+  padding-right: 0.625rem;
+  border: none;
+  border-right: 1px solid #999;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item input::-moz-placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item input::placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item .custom-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.5rem;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item .custom-select-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12.5rem;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item .custom-select-wrapper .custom-select {
+  width: 100%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  color: #333;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item .custom-select-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: 0.625rem;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-top-color: red;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .item-search {
+  margin-right: 0.625rem;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .col-button {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+main .section-list-recruitment .container-recruitment .left .group-search .col-button button {
+  border-radius: 100px;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  background: var(--Primary-Color-500, #ED1E29);
+  padding: 0.7813rem 2rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+  font-family: var(--f-body);
+  margin-bottom: 3.125rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child {
+  display: flex;
+  gap: 2.5rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .image {
+  width: 20.5rem;
+  height: 14.5rem;
+  border-radius: 1rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .image img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor h3 {
+  color: #453F3F;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+  margin-bottom: 0.625rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .deadline-and-address {
+  display: flex;
+  gap: 1.25rem;
+  color: #453F3F;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .deadline-and-address p {
+  font-weight: 400;
+  line-height: 1.25rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .deadline-and-address span {
+  font-weight: 700;
+  line-height: 1.375rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor h4 {
+  color: #453F3F;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .required {
+  margin-bottom: 2rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .required ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 0.125rem;
+  -moz-column-gap: 3.125rem;
+       column-gap: 3.125rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .required ul li:nth-child(n+5) {
+  display: none;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .required ul li {
+  display: flex;
+  gap: 0.625rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .required ul li p {
+  color: #453F3F;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .required ul li svg {
+  margin-top: 0.3125rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .apply {
+  padding: 0.75rem 2rem;
+  background-color: var(--white);
+  color: #ED1E29;
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+  border-radius: 6.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-list-recruitment .container-recruitment .left .list-job .child .infor .apply:hover {
+  background-color: #ED1E29;
+  color: var(--white);
+}
+main .section-detail-recruitment {
+  position: relative;
+  margin-top: 15rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-detail-recruitment .form-apply {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  padding: 5.625rem 2.5rem 5.625rem 2.5rem;
+  top: 16.875rem;
+  width: 75rem;
+  border-radius: 1.25rem;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.1);
+}
+main .section-detail-recruitment .form-apply.show {
+  display: block;
+}
+main .section-detail-recruitment .form-apply .close {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.75rem;
+  position: absolute;
+  top: 1.875rem;
+  right: 2.5rem;
+  padding: 0.75rem;
+  border-radius: 100px;
+  background: var(--HEADER, #FFF);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.1);
+}
+main .section-detail-recruitment .form-apply .content {
+  font-family: var(--f-body);
+  position: relative;
+  display: flex;
+  gap: 1.875rem;
+}
+main .section-detail-recruitment .form-apply .content .left {
+  width: 41.625rem;
+}
+main .section-detail-recruitment .form-apply .content .left h2.title {
+  color: #1D1D1D;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 0.5rem;
+}
+main .section-detail-recruitment .form-apply .content .left p.guide {
+  color: #1D1D1D;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin-bottom: 1.875rem;
+  width: inherit;
+}
+main .section-detail-recruitment .form-apply .content .left .child-input {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.875rem;
+}
+main .section-detail-recruitment .form-apply .content .left .child-input .section-input {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+main .section-detail-recruitment .form-apply .content .left .child-input .section-input label {
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 600px;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .form-apply .content .left .child-input .section-input input {
+  padding: 1rem 1.25rem;
+  border-radius: 0.625rem;
+  border: 1px solid var(--Primary-Color-500, #999);
+  background: var(--HEADER, #FFF);
+}
+main .section-detail-recruitment .form-apply .content .left .child-input .section-input input::-moz-placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-detail-recruitment .form-apply .content .left .child-input .section-input input::placeholder {
+  color: var(--Text-400, #999);
+}
+main .section-detail-recruitment .form-apply .content .left .child-input .section-input input:focus {
+  border: 1px solid var(--Primary-Color-500, #ED1E29);
+}
+main .section-detail-recruitment .form-apply .content .left .child-input .line-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5625rem;
+}
+main .section-detail-recruitment .form-apply .content .right {
+  padding-top: 8.25rem;
+}
+main .section-detail-recruitment .form-apply .content .right .file {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+  margin-bottom: 1.875rem;
+}
+main .section-detail-recruitment .form-apply .content .right .file > label {
+  color: #1D1D1D;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .form-apply .content .right .file .choose-file {
+  padding: 4.625rem 2.375rem;
+  border-radius: 10px;
+  border: 1px dashed var(--Primary-main-1, #028938);
+  background: #F9F9F9;
+}
+main .section-detail-recruitment .form-apply .content .right .file .choose-file input {
+  display: none;
+}
+main .section-detail-recruitment .form-apply .content .right .file .choose-file .upload-cv {
+  display: flex;
+  gap: 0.625rem;
+}
+main .section-detail-recruitment .form-apply .content .right button {
+  border-radius: 100px;
+  border: 1px solid #ED1E29;
+  color: var(--white);
+  background: var(--Primary-Color-500, #ED1E29);
+  padding: 0.7813rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .form-apply .content .right button:hover {
+  background-color: var(--white);
+  color: #ED1E29;
+}
+main .section-detail-recruitment .container-detail-recruitment {
+  position: relative;
+  gap: 3.4375rem !important;
+  font-family: var(--f-body);
+  margin-bottom: 9.3125rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .bot {
+  position: absolute;
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .bot a {
+  color: #4D4D4D;
+}
+main .section-detail-recruitment .container-detail-recruitment .bot a.active {
+  color: #ED1E29;
+}
+main .section-detail-recruitment .container-detail-recruitment .left {
+  position: relative;
+  margin-top: 4.5rem;
+  width: 61.75rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor {
+  padding: 3.125rem 2.5rem;
+  margin-bottom: 3.125rem;
+  display: flex;
+  gap: 2rem;
+  border-radius: 1.25rem;
+  border: 0.5px solid var(--Text-400, #999);
+  background: var(--HEADER, #FFF);
+  box-shadow: 0 0.625rem 1.25rem 0 rgba(0, 0, 0, 0.05);
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-left {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-left img {
+  width: inherit;
+  height: inherit;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right h4.company-name {
+  color: #4D4D4D;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  margin-bottom: 0.9375rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right h3.job-name {
+  color: #453F3F;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  margin-bottom: 1.25rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .salary-and-address {
+  width: 32.75rem;
+  display: flex;
+  gap: 7.75rem;
+  margin-bottom: 1.25rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .posted-and-deadline {
+  width: 36.875rem;
+  display: flex;
+  gap: 7.3125rem;
+  margin-bottom: 1.875rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .salary, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .address, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .posted, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .deadline {
+  display: flex;
+  gap: 0.9375rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .salary img, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .address img, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .posted img, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .deadline img {
+  width: 2.1875rem;
+  height: 2.1875rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .salary p, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .address p, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .posted p, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .deadline p {
+  color: #999;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .salary p span, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .address p span, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .posted p span, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .deadline p span {
+  color: var(--black);
+  margin-left: 0.5625rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .salary p .active, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .address p .active, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .posted p .active, main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .deadline p .active {
+  color: #ED1E29;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .apply-and-love {
+  display: flex;
+  gap: 1.25rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .apply-and-love .apply {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7813rem 2rem;
+  border-radius: 100px;
+  color: var(--white);
+  border: 1px solid #ED1E29;
+  background: var(--Primary-Color-500, #ED1E29);
+  cursor: pointer;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .apply-and-love .apply:hover {
+  background-color: var(--white);
+  color: #ED1E29;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .infor .child-right .apply-and-love svg {
+  padding: 0.7813rem;
+  border-radius: 100px;
+  background: var(--Primary-Color-50, #FDE7E8);
+  cursor: pointer;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0 2.125rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit {
+  display: flex;
+  gap: 1.875rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .required h3, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .benifit h3 {
+  color: #453F3F;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .required nav ul, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .benifit nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .required nav ul li, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .benifit nav ul li {
+  display: flex;
+  gap: 0.625rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .required nav ul li svg, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .benifit nav ul li svg {
+  margin-top: 0.3125rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .required nav ul li p, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .benifit nav ul li p {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .required-and-benifit .required {
+  width: 23.125rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .quantity, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .position, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .formal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  color: #453F3F;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .quantity h4, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .position h4, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .formal h4 {
+  font-weight: 700;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .quantity p, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .position p, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .formal p {
+  font-weight: 400;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .job-description, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .job-required, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .salary, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .infor-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .job-description h3, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .job-required h3, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .salary h3, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .infor-contact h3 {
+  color: var(--Primary-Color-600, #BD0F18);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .job-description .text-content, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .job-required .text-content, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .salary .text-content, main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .infor-contact .text-content {
+  color: var(--Text-Content, #453F3F);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .detail-infor .infor-contact {
+  color: var(--Text-Content, #453F3F);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .left .icon-social-media {
+  position: absolute;
+  left: 2.125rem;
+  bottom: -4.375rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right {
+  margin-top: 4.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion {
+  padding: 1.875rem 0.625rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion h2 {
+  width: 14.75rem;
+  color: #4D4D4D;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.6875rem;
+  text-transform: uppercase;
+  padding-bottom: 0.875rem;
+  border-bottom: 1px solid #BD0F18;
+  margin-bottom: 1.25rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9375rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .infor {
+  display: flex;
+  gap: 0.625rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .infor a {
+  width: 4.525rem;
+  height: 4.625rem;
+  border-radius: 0.625rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .infor a img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .infor .name h4 {
+  color: #453F3F;
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3125rem;
+  margin-bottom: 0.3125rem;
+  width: 12.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .infor .name p {
+  color: #453F3F;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  text-transform: uppercase;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .bottom .salary, main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .bottom .location {
+  padding: 0.3125rem 0.625rem;
+  color: var(--black);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+  border-radius: 5px;
+  background: #F3F8F8;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .list-job .child .bottom .love {
+  margin-top: 4px;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .view-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ED1E29;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-detail-recruitment .container-detail-recruitment .right .list-suggestion .view-more svg {
+  margin-left: 0.625rem;
+}
+main .section-list-project, main .section-project {
+  margin-top: 2.5rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-list-project .container-project, main .section-project .container-project {
+  width: 85.5rem;
+  font-family: var(--f-body);
+}
+main .section-list-project .container-project .type, main .section-project .container-project .type {
+  margin-bottom: 6.25rem;
+}
+main .section-list-project .container-project .type h2, main .section-project .container-project .type h2 {
+  color: var(--Text-content, #303030);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin-bottom: 3rem;
+}
+main .section-list-project .container-project .type .list-project, main .section-project .container-project .type .list-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  -moz-column-gap: 1.5rem;
+       column-gap: 1.5rem;
+  row-gap: 1.5rem;
+  margin-bottom: 6.25rem;
+}
+main .section-list-project .container-project .type .list-project .child, main .section-project .container-project .type .list-project .child {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 1.25rem 0 rgba(21, 21, 21, 0.1);
+}
+main .section-list-project .container-project .type .list-project .child img, main .section-project .container-project .type .list-project .child img {
+  border-radius: 1rem 1rem 0 0;
+  height: 20rem;
+}
+main .section-list-project .container-project .type .list-project .child .infor, main .section-project .container-project .type .list-project .child .infor {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #303030;
+}
+main .section-list-project .container-project .type .list-project .child .infor h3, main .section-project .container-project .type .list-project .child .infor h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+main .section-list-project .container-project .type .list-project .child .infor .description, main .section-project .container-project .type .list-project .child .infor .description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
+main .section-list-project .container-project .type .list-project .child .infor > a, main .section-project .container-project .type .list-project .child .infor > a {
+  display: flex;
+  gap: 0.625rem;
+}
+main .section-list-project .container-project .type .list-project .child .infor > a span, main .section-project .container-project .type .list-project .child .infor > a span {
+  color: #ED1E29;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+main .section-list-project .container-project .type .list-project .child .infor > a svg, main .section-project .container-project .type .list-project .child .infor > a svg {
+  margin-top: 0.125rem;
+}
+main .section-list-project .container-project .view-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section-list-project .container-project .view-more a {
+  color: #ED1E29;
+  border: 1px solid #ED1E29;
+  background-color: var(--white);
+  padding: 0.6875rem 3rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+  border-radius: 3.125rem;
+}
+main .section-list-project .container-project .view-more a:hover {
+  background-color: #ED1E29;
+  color: var(--white);
 }
 main .login-page {
   position: relative;
@@ -2535,6 +3765,7 @@ main .login-page .left .container form .login-options .forgot-password {
   font-size: 0.875rem;
   font-weight: 700;
   line-height: 1.375rem;
+  cursor: pointer;
 }
 main .login-page .left .container form .button {
   font-family: var(--f-body);
@@ -2675,8 +3906,8 @@ main .login-page .right .card .vica h3 {
 }
 main .login-page .section-forgot-password {
   position: fixed;
-  visibility: hidden;
-  top: 13.75rem;
+  display: none;
+  top: 17.5rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 9999;
@@ -2686,7 +3917,7 @@ main .login-page .section-forgot-password {
   overflow: auto;
 }
 main .login-page .section-forgot-password.show {
-  visibility: visible;
+  display: block;
 }
 main .login-page .section-forgot-password .container {
   height: inherit;

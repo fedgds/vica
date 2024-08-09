@@ -1,32 +1,9 @@
-// Modal forgot password page
-document.addEventListener("DOMContentLoaded", () => {
-    const openModalBtn = document.getElementById("open-modal-forgot-password");
-    const closeModalBtn = document.getElementById("close-modal-forgot-password");
-    const forgotPasswordModal = document.getElementById("forgotPasswordModal");
-    const backToLoginBtn = document.getElementById("back-to-login");
-
-    openModalBtn.addEventListener("click", (event) => {
-        event.preventDefault();
-        forgotPasswordModal.style.visibility = "visible";
-    });
-
-    closeModalBtn.addEventListener("click", () => {
-        forgotPasswordModal.style.visibility = "hidden";
-    });
-
-    backToLoginBtn.addEventListener("click", () => {
-        forgotPasswordModal.style.visibility = "hidden";
-    });
-});
-
-// End modal forgot password page
-
 // Modal menu header
 document.addEventListener('DOMContentLoaded', function () {
     const openMenu = document.querySelector('#open-menu-header');
     const closeMenu = document.querySelector('#close-menu-header');
     const menuHeader = document.getElementById('menuHeader');
-    const backdrop = document.getElementById('backdrop');
+    const backdrop = document.getElementById('backdrop-menu');
 
     function showMenu() {
         menuHeader.classList.add('show');
@@ -50,8 +27,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
 // End modal menu header
+
+// Modal forgot password page
+document.addEventListener('DOMContentLoaded', function () {
+    const openFormForgotPassword = document.querySelector('#open-modal-forgot-password');
+    const closeFormForgotPassword = document.querySelector('#close-modal-forgot-password');
+    const forgotPasswordModal = document.getElementById('forgotPasswordModal');
+    const backdrop = document.getElementById('backdrop-forgot-password');
+
+    function showMenu() {
+        forgotPasswordModal.classList.add('show');
+        backdrop.classList.add('show');
+    }
+
+    function hideMenu() {
+        forgotPasswordModal.classList.remove('show');
+        backdrop.classList.remove('show');
+    }
+
+    openFormForgotPassword.addEventListener('click', showMenu);
+
+    closeFormForgotPassword.addEventListener('click', hideMenu);
+
+    backdrop.addEventListener('click', hideMenu);
+
+    document.addEventListener('click', function (event) {
+        if (!forgotPasswordModal.contains(event.target) && !openFormForgotPassword.contains(event.target)) {
+            hideMenu();
+        }
+    });
+});
+// End modal forgot password page
 
 // Tab list partner
 document.addEventListener('DOMContentLoaded', function () {
@@ -129,9 +136,38 @@ document.addEventListener('DOMContentLoaded', function () {
         console.error('One or more elements not found');
     }
 });
-
 // End tab form subscribe member
 
+// Modal form apply
+document.addEventListener('DOMContentLoaded', function () {
+    const openFormApply = document.querySelector('#open-modal-apply');
+    const closeFormApply = document.querySelector('#close-modal-apply');
+    const modalFormApply = document.getElementById('modal-form-apply');
+    const backdrop = document.getElementById('backdrop-apply');
+
+    function showModal() {
+        modalFormApply.classList.add('show');
+        backdrop.classList.add('show');
+    }
+
+    function hideModal() {
+        modalFormApply.classList.remove('show');
+        backdrop.classList.remove('show');
+    }
+
+    openFormApply.addEventListener('click', showModal);
+
+    closeFormApply.addEventListener('click', hideModal);
+
+    backdrop.addEventListener('click', hideModal);
+
+    document.addEventListener('click', function (event) {
+        if (!modalFormApply.contains(event.target) && !openFormApply.contains(event.target)) {
+            hideModal();
+        }
+    });
+});
+// End modal form apply
 
 // Tab navigation profile page
 document.addEventListener('DOMContentLoaded', function () {
@@ -180,7 +216,37 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // End tab navigation profile page
 
-// Đo chiều rộng của viewport
+// Modal modal form subscribe
+document.addEventListener('DOMContentLoaded', function () {
+    const openForm = document.querySelector('#open-form-subscribe');
+    const closeForm = document.querySelector('#colse-form-subscribe');
+    const formSubsc = document.getElementById('modal-form-subscribe');
+    const backdrop = document.getElementById('backdrop-subscribe');
+
+    function showForm() {
+        formSubsc.classList.add('show');
+        backdrop.classList.add('show');
+    }
+
+    function hideForm() {
+        formSubsc.classList.remove('show');
+        backdrop.classList.remove('show');
+    }
+
+    openForm.addEventListener('click', showForm);
+
+    closeForm.addEventListener('click', hideForm);
+
+    backdrop.addEventListener('click', hideForm);
+
+    document.addEventListener('click', function (event) {
+        if (!formSubsc.contains(event.target) && !openForm.contains(event.target)) {
+            hideForm();
+        }
+    });
+});
+// End modal modal form subscribe
+
 var viewportWidth = window.innerWidth;
 
 console.log('Chiều rộng của viewport: ' + viewportWidth + 'px');

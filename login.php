@@ -1,6 +1,7 @@
 <?php include('header.php') ?>
 <main>
     <section class="login-page">
+        <div id="backdrop-forgot-password" class="backdrop"></div>
         <div class="left">
             <div class="background"></div>
             <div class="container">
@@ -24,7 +25,7 @@
                             <input type="checkbox" id="remember-me" checked>
                             <label for="remember-me">Ghi nhớ đăng nhập</label>
                         </div>
-                        <a href="" class="forgot-password" id="open-modal-forgot-password">Quên mật khẩu</a>
+                        <p class="forgot-password" id="open-modal-forgot-password">Quên mật khẩu</p>
                     </div>
                     <div class="button">
                         <button class="login">Đăng nhập</button>

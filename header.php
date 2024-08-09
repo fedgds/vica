@@ -52,12 +52,12 @@
                     <ul class="nav-menu">
                         <li><a class="active" href="http://localhost/project-vica/about.php">Giới thiệu</a></li>
                         <li><a href="http://localhost/project-vica/member.php">Hội viên</a></li>
-                        <li><a href="#">Đào tạo</a></li>
-                        <li><a href="#">Cơ hội việc làm</a></li>
-                        <li><a href="#">Dự án</a></li>
-                        <li><a href="#">Cơ sở dữ liệu</a></li>
-                        <li><a href="#">Sự kiện</a></li>
-                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="http://localhost/project-vica/training.php">Đào tạo</a></li>
+                        <li><a href="http://localhost/project-vica/recruitment.php">Cơ hội việc làm</a></li>
+                        <li><a href="http://localhost/project-vica/project.php">Dự án</a></li>
+                        <li><a href="http://localhost/project-vica/database.php">Cơ sở dữ liệu</a></li>
+                        <li><a href="http://localhost/project-vica/event.php">Sự kiện</a></li>
+                        <li><a href="http://localhost/project-vica/news.php">Tin tức</a></li>
                     </ul>
                 </nav>
             </div>
@@ -72,7 +72,7 @@
                 </svg>
             </div>
         </div>
-        <div id="backdrop" class="backdrop"></div>
+        <div id="backdrop-menu" class="backdrop"></div>
         <div id="menuHeader" class="menu-mobile">
             <div class="top">
                 <img src="asset/image/logo.png" alt="VICA Logo" class="logo">

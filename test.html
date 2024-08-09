@@ -3,61 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Phone Number Input</title>
     <style>
-        .slide-container {
-            width: 400px;
-            height: 300px;
-            overflow: hidden;
-          }
-          
-          .slide {
-            width: 100%;
-            height: 100%;
-            display: none;
-          }
+      .custom-select-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .custom-select {
+        width: 100%;
+        padding: 10px 40px 10px 10px; 
+        appearance: none;
+        background: white;
+        border: 1px solid #ccc;
+        color: #333;
+    }
+    
+    .custom-select-wrapper::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        border: 5px solid transparent; 
+        border-top-color: red; 
+    }
+    
     </style>
 </head>
 <body>
-    <div class="slide-container">
-        <div class="slide">Slide 1</div>
-        <div class="slide">Slide 2</div>
-        <div class="slide">Slide 3</div>
-      </div>
-      <button class="prev-btn">Previous</button>
-<button class="next-btn">Next</button>
-      <script>
-        $(document).ready(function() {
-            var slides = $('.slide');
-            var currentSlide = 0;
-          
-            // Hiển thị slide đầu tiên
-            $(slides[currentSlide]).fadeIn();
-          
-            // Hàm chuyển đổi slide
-            function showSlide(index) {
-              // Ẩn slide hiện tại
-              $(slides[currentSlide]).fadeOut();
-              // Hiển thị slide mới
-              $(slides[index]).fadeIn();
-              // Cập nhật chỉ số slide hiện tại
-              currentSlide = index;
-            }
-          
-            // Xử lý sự kiện khi nhấn nút "Next"
-            $('.next-btn').click(function() {
-              var nextSlide = (currentSlide + 1) % slides.length;
-              showSlide(nextSlide);
-            });
-          
-            // Xử lý sự kiện khi nhấn nút "Previous"
-            $('.prev-btn').click(function() {
-              var prevSlide = (currentSlide - 1 + slides.length) % slides.length;
-              showSlide(prevSlide);
-            });
-          });
-          
-      </script>
+  <div class="custom-select-wrapper">
+    <select class="custom-select">
+        <option>Thời gian làm việc</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+    </select>
+</div>
 </body>
 </html>
