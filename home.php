@@ -30,16 +30,16 @@
                     </svg>
                 </div>
             </div>
-            <div class="list-new">
-                <div class="new-left">
+            <div class="list-news">
+                <div class="news-left">
                     <img src="asset/image/new1.png" alt="">
-                    <div class="new-content">
-                        <div class="title">
-                            <h3>Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam</h3>
-                        </div>
-                        <div class="content">
-                            <p>Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục...</p>
-                        </div>
+                    <div class="news-content">
+                        <h3 class="title">
+                            Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam bla bla bla
+                        </h3>
+                        <p class="content">
+                            Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục bla bla bla bla
+                        </p>
                         <div class="date-and-views">
                             <div class="date">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -60,16 +60,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="new-right">
-                    <div class="new-top">
+                <div class="news-right">
+                    <div class="news-top">
                         <img src="asset/image/new2.png" alt="">
-                        <div class="new-content">
-                            <div class="title">
-                                <h3>Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam</h3>
-                            </div>
-                            <div class="content">
-                                <p>Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục...</p>
-                            </div>
+                        <div class="news-content">
+                            <h3 class="title">
+                                Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam bla bla bla bla bla bla bla bla
+                            </h3>
+                            <p class="content">
+                                Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục bla bla bla bla
+                            </p>
                             <div class="date-and-views">
                                 <div class="date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -90,15 +90,15 @@
                             </div>
                         </div>
                     </div>
-                    <div class="new-bottom">
+                    <div class="news-bottom">
                         <img src="asset/image/new3.png" alt="">
-                        <div class="new-content">
-                            <div class="title">
-                                <h3>Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam</h3>
-                            </div>
-                            <div class="content">
-                                <p>Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục...</p>
-                            </div>
+                        <div class="news-content">
+                            <h3 class="title">
+                                Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam
+                            </h3>
+                            <p class="content">
+                                Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục...
+                            </p>
                             <div class="date-and-views">
                                 <div class="date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -142,7 +142,7 @@
                         <img src="asset/image/even1.png" alt="">
                         <div class="content">
                             <div class="title">
-                                <h3>Cuộc thi đầu bếp Việt Nam Cuộc thi đầu bếp Việt Nam</h3>
+                                <h3>Cuộc thi đầu bếp Việt Nam Cuộc thi đầu bếp Việt Nam bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</h3>
                             </div>
                             <div class="infor">
                                 <div class="date-and-address">
@@ -175,9 +175,9 @@
                                     </svg>
                                     <p>Online</p>
                                 </div>
-                                <div class="description">
-                                    <p>Tổ chức các chương trình đào tạo và cấp chứng chỉ theo chuẩn chương trình trong nước, quốc tế….</p>
-                                </div>
+                                <p class="description">
+                                    Tổ chức các chương trình đào tạo và cấp chứng chỉ theo chuẩn chương trình trong nước, bla bla bla bla
+                                </p>
                             </div>
                             <div class="view-detail">
                                 <a href="">Xem chi tiết</a>
@@ -312,19 +312,19 @@
                     <img src="asset/image/course1.png" alt="">
                     <div class="content">
                         <h3>Trở thành Worldchefs được chứng nhận Khách sạn Toàn cầu</h3>
-                        <div class="description">
+                        <p class="description">
                             Thể hiện kỹ năng của bạn và mở ra con đường sự nghiệp của bạn
                             với Chứng chỉ Khách sạn Toàn cầu
-                        </div>
+                        </p>
                         <a href="">Đăng ký học</a>
                     </div>
                 </div>
                 <div class="course course-2">
                     <div class="content">
                         <h3>Tham gia cùng các đầu bếp đầy tham vọng trên khắp thế giới!</h3>
-                        <div class="description">
-                            <p>Đăng ký ngay hôm nay để tham gia Chương trình đào tạo đầu bếp Pre-Commis MIỄN PHÍ hoặc Giáo dục bền vững cho các chuyên gia ẩm thực ngay hôm nay!</p>
-                        </div>
+                        <p class="description">
+                            Đăng ký ngay hôm nay để tham gia Chương trình đào tạo đầu bếp Pre-Commis MIỄN PHÍ hoặc Giáo dục bền vững cho các chuyên gia ẩm thực ngay hôm nay!
+                        </p>
                         <a href="">Đăng ký học</a>
                     </div>
                     <img src="asset/image/course2.png" alt="">
@@ -333,10 +333,10 @@
                     <img src="asset/image/course3.png" alt="">
                     <div class="content">
                         <h3>Trở thành Worldchefs được chứng nhận</h3>
-                        <div class="description">
-                            <p>Thể hiện kỹ năng của bạn và mở ra con đường sự nghiệp của bạn
-                            với Chứng chỉ Khách sạn Toàn cầu.</p>
-                        </div>
+                        <p class="description">
+                            Thể hiện kỹ năng của bạn và mở ra con đường sự nghiệp của bạn
+                            với Chứng chỉ Khách sạn Toàn cầu.
+                        </p>
                         <a href="">Đăng ký học</a>
                     </div>
                 </div>
@@ -381,7 +381,7 @@
                 <div class="recipe">
                     <div class="infor">
                         <div class="recipe-name">
-                            <h3>Beef Steak với cà chua và hương thảo</h3>
+                            <h3>Beef Steak với cà chua và hương thảo bla bla bla bla bla bla</h3>
                         </div>
                         <div class="time">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
@@ -401,7 +401,7 @@
                             <p>4 khẩu phần</p>
                         </div>
                         <div class="view-detail">
-                            <a href="">Xem chi tiết</a>
+                            <a href="http://localhost/project-vica/detail-recipe.php">Xem chi tiết</a>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.67461 3.28688C5.88428 3.10717 6.19993 3.13145 6.37964 3.34112L10.3796 8.00778C10.5401 8.19503 10.5401 8.47133 10.3796 8.65857L6.37964 13.3252C6.19993 13.5349 5.88428 13.5592 5.67461 13.3795C5.46495 13.1998 5.44067 12.8841 5.62038 12.6744L9.34147 8.33318L5.62038 3.99191C5.44067 3.78225 5.46495 3.4666 5.67461 3.28688Z" fill="#ED1E29"/>
                             </svg>
@@ -565,6 +565,7 @@
                     <img src="asset/image/food6.png" alt="">
                 </div>
             </div>
+            <a href="" class="view-all">Xem tất cả</a>
         </div>
     </section>
     <section class="section-7-homepage">

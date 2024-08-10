@@ -1,4 +1,4 @@
-<section class="section-banner-about">
+<section class="section-banner">
     <div class="background"></div>
     <div class="content">
         <img src="asset/image/about-banner.png" alt="">

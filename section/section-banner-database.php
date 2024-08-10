@@ -4,7 +4,7 @@
         <img src="asset/image/about-banner.png" alt="">
         <div class="text">
             <div class="text-title">
-                <h1>Danh sách hội viên</h1>
+                <h1>Báo cáo và Thống kê </h1>
             </div>
             <div class="bot">
                 <a href="">
@@ -12,11 +12,11 @@
                 </a>
                 <span>/</span>
                 <a href="">
-                    Hội viên
+                    Cơ sở dữ liệu
                 </a>
                 <span>/</span>
                 <a href=""> 
-                    Danh sách hội viên
+                    Báo cáo hàng năm
                 </a>
             </div>
         </div>

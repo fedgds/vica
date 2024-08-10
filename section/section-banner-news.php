@@ -4,7 +4,7 @@
         <img src="asset/image/about-banner.png" alt="">
         <div class="text">
             <div class="text-title">
-                <h1>Danh sách hội viên</h1>
+                <h1>Tin tức</h1>
             </div>
             <div class="bot">
                 <a href="">
@@ -12,11 +12,7 @@
                 </a>
                 <span>/</span>
                 <a href="">
-                    Hội viên
-                </a>
-                <span>/</span>
-                <a href=""> 
-                    Danh sách hội viên
+                    Tin tức
                 </a>
             </div>
         </div>

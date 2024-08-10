@@ -7,9 +7,7 @@
             <div class="description">
                 <p>Lorem ipsum dolor sit amet consectetur. Tristique semper pharetra condimentum et augue ornare quis. Turpis ut ut scelerisque eleifend sapien mi ipsum. </p>
             </div>
-            <div class="button">
-                <a href="">Đóng góp ngay</a>
-            </div>
+            <a href="" class="donate">Đóng góp ngay</a>
         </div>
         <div class="right">
             <div class="image"></div>

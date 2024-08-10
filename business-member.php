@@ -20,7 +20,7 @@
                         <div class="child">
                             <img src="asset/image/business-member-1.png" alt="">
                             <div class="name">
-                                <p>Electrolux Food Foundation</p>
+                                <p>Alaw Hawor Electrolux Food Foundation</p>
                             </div>
                         </div>
                         <div class="child">
