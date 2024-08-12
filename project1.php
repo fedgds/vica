@@ -3,7 +3,7 @@
     <?php include('section/section-banner-project.php') ?>
     <section class="section-project">
         <div class="container-project">
-        <div class="type">
+            <div class="type">
                 <h2>Dự án đang triển khai</h2>
                 <div class="list-project">
                     <div class="child">

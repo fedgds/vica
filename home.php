@@ -35,11 +35,11 @@
                     <img src="asset/image/new1.png" alt="">
                     <div class="news-content">
                         <h3 class="title">
-                            Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam bla bla bla
+                            <a href="http://localhost/project-vica/detail-news.php">Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam bla bla bla</a>
                         </h3>
-                        <p class="content">
-                            Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục bla bla bla bla
-                        </p>
+                        <div class="content">
+                            <p>Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục bla bla bla bla</p>
+                        </div>
                         <div class="date-and-views">
                             <div class="date">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -65,11 +65,11 @@
                         <img src="asset/image/new2.png" alt="">
                         <div class="news-content">
                             <h3 class="title">
-                                Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam bla bla bla bla bla bla bla bla
+                                <a href="">Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam bla bla bla bla bla bla bla bla</a>
                             </h3>
-                            <p class="content">
-                                Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục bla bla bla bla
-                            </p>
+                            <div class="content">
+                                <p>Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục bla bla bla bla</p>
+                            </div>
                             <div class="date-and-views">
                                 <div class="date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -94,11 +94,11 @@
                         <img src="asset/image/new3.png" alt="">
                         <div class="news-content">
                             <h3 class="title">
-                                Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam
+                                <a href="">Ra mắt Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam</a>
                             </h3>
-                            <p class="content">
-                                Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục...
-                            </p>
+                            <div class="content">
+                                <p>Sáng ngày 26/3, tại Hà Nội đã diễn ra Đại hội thành lập Hiệp hội Dạy nghề và Việc làm Đầu bếp Việt Nam nhiệm kỳ 2024 - 2029. Phó Cục trưởng Cục...</p>
+                            </div>
                             <div class="date-and-views">
                                 <div class="date">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -137,7 +137,7 @@
                 </div>
             </div>
             <div class="container-list">
-                <div class="list-even">
+                <div class="list-event">
                     <div class="even-child">
                         <img src="asset/image/even1.png" alt="">
                         <div class="content">
@@ -180,7 +180,7 @@
                                 </p>
                             </div>
                             <div class="view-detail">
-                                <a href="">Xem chi tiết</a>
+                                <a href="http://localhost/project-vica/detail-news.php">Xem chi tiết</a>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M7.09327 4.19198C7.35535 3.96734 7.74991 3.99769 7.97455 4.25977L12.9745 10.0931C13.1752 10.3272 13.1752 10.6725 12.9745 10.9066L7.97455 16.7399C7.74991 17.002 7.35535 17.0324 7.09327 16.8077C6.83119 16.5831 6.80084 16.1885 7.02548 15.9264L11.6768 10.4998L7.02548 5.07326C6.80084 4.81118 6.83119 4.41662 7.09327 4.19198Z" fill="#ED1E29"/>
                                 </svg>

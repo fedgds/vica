@@ -646,7 +646,7 @@ main .section-1-homepage {
   justify-content: center;
 }
 main .section-1-homepage .container {
-  width: 84.5rem;
+  width: 85.5rem;
 }
 main .section-1-homepage .container .title-and-view {
   display: flex;
@@ -682,7 +682,6 @@ main .section-1-homepage .container .list-news .news-left {
   width: 40rem;
 }
 main .section-1-homepage .container .list-news .news-left img {
-  width: inherit;
   height: 21.25rem;
   border-radius: 1rem;
   margin-bottom: 1.5rem;
@@ -744,6 +743,7 @@ main .section-1-homepage .container .list-news .news-right .news-top, main .sect
 }
 main .section-1-homepage .container .list-news .news-right .news-top img, main .section-1-homepage .container .list-news .news-right .news-bottom img {
   width: 14.5rem;
+  height: 14.5rem;
   border-radius: 1rem;
 }
 main .section-1-homepage .container .list-news .news-right .news-top .news-content h3.title, main .section-1-homepage .container .list-news .news-right .news-bottom .news-content h3.title {
@@ -759,9 +759,11 @@ main .section-1-homepage .container .list-news .news-right .news-top .news-conte
   font-weight: 700;
   line-height: 1.625rem;
 }
-main .section-1-homepage .container .list-news .news-right .news-top .news-content p.content, main .section-1-homepage .container .list-news .news-right .news-bottom .news-content p.content {
+main .section-1-homepage .container .list-news .news-right .news-top .news-content .content, main .section-1-homepage .container .list-news .news-right .news-bottom .news-content .content {
   margin-top: 1rem;
   margin-bottom: 1.5rem;
+}
+main .section-1-homepage .container .list-news .news-right .news-top .news-content .content p, main .section-1-homepage .container .list-news .news-right .news-bottom .news-content .content p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -773,18 +775,18 @@ main .section-1-homepage .container .list-news .news-right .news-top .news-conte
   font-weight: 400;
   line-height: 1.5rem;
 }
-main .section-1-homepage .container .list-news .news-right .news-top .date-and-views, main .section-1-homepage .container .list-news .news-right .news-bottom .date-and-views {
+main .section-1-homepage .container .list-news .news-right .news-top .news-content .date-and-views, main .section-1-homepage .container .list-news .news-right .news-bottom .news-content .date-and-views {
   display: flex;
   gap: 0.375rem;
 }
-main .section-1-homepage .container .list-news .news-right .news-top .date-and-views .date, main .section-1-homepage .container .list-news .news-right .news-bottom .date-and-views .date {
+main .section-1-homepage .container .list-news .news-right .news-top .news-content .date-and-views .date, main .section-1-homepage .container .list-news .news-right .news-bottom .news-content .date-and-views .date {
   display: flex;
   gap: 0.75rem;
   color: #ED1E29;
 }
-main .section-1-homepage .container .list-news .news-right .news-top .date-and-views > p,
-main .section-1-homepage .container .list-news .news-right .news-top .date-and-views .views p, main .section-1-homepage .container .list-news .news-right .news-bottom .date-and-views > p,
-main .section-1-homepage .container .list-news .news-right .news-bottom .date-and-views .views p {
+main .section-1-homepage .container .list-news .news-right .news-top .news-content .date-and-views > p,
+main .section-1-homepage .container .list-news .news-right .news-top .news-content .date-and-views .views p, main .section-1-homepage .container .list-news .news-right .news-bottom .news-content .date-and-views > p,
+main .section-1-homepage .container .list-news .news-right .news-bottom .news-content .date-and-views .views p {
   color: #515151;
 }
 main .section-2-homepage {
@@ -793,7 +795,7 @@ main .section-2-homepage {
   justify-content: center;
 }
 main .section-2-homepage .container {
-  width: 84.5rem;
+  width: 85.5rem;
   position: relative;
 }
 main .section-2-homepage .container .title-and-view {
@@ -824,27 +826,27 @@ main .section-2-homepage .container .title-and-view .view-more a {
 main .section-2-homepage .container .container-list {
   position: relative;
 }
-main .section-2-homepage .container .container-list .list-even {
+main .section-2-homepage .container .container-list .list-event {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1.5rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child {
+main .section-2-homepage .container .container-list .list-event .even-child {
   display: flex;
   flex-direction: column;
 }
-main .section-2-homepage .container .container-list .list-even .even-child img {
+main .section-2-homepage .container .container-list .list-event .even-child img {
   width: 27.5rem;
   height: 20rem;
   border-radius: 16px 16px 0px 0px;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content {
+main .section-2-homepage .container .container-list .list-event .even-child .content {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .title h3 {
+main .section-2-homepage .container .container-list .list-event .even-child .content .title h3 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -856,7 +858,7 @@ main .section-2-homepage .container .container-list .list-even .even-child .cont
   font-weight: 700;
   line-height: 1.625rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .infor {
+main .section-2-homepage .container .container-list .list-event .even-child .content .infor {
   font-family: var(--f-body);
   display: flex;
   flex-direction: column;
@@ -865,29 +867,29 @@ main .section-2-homepage .container .container-list .list-even .even-child .cont
   font-weight: 400;
   line-height: 1.5rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .infor .date-and-address {
+main .section-2-homepage .container .container-list .list-event .even-child .content .infor .date-and-address {
   display: flex;
   gap: 0.5rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .infor .date-and-address .date {
+main .section-2-homepage .container .container-list .list-event .even-child .content .infor .date-and-address .date {
   display: flex;
   gap: 0.5rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .infor .date-and-address .address {
+main .section-2-homepage .container .container-list .list-event .even-child .content .infor .date-and-address .address {
   display: flex;
   gap: 0.5rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .infor .organizer {
+main .section-2-homepage .container .container-list .list-event .even-child .content .infor .organizer {
   display: flex;
   gap: 0.5rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .infor .organizer .dot {
+main .section-2-homepage .container .container-list .list-event .even-child .content .infor .organizer .dot {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 0.375rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .infor p.description {
+main .section-2-homepage .container .container-list .list-event .even-child .content .infor p.description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -898,7 +900,7 @@ main .section-2-homepage .container .container-list .list-even .even-child .cont
   font-weight: 400;
   line-height: 1.5rem;
 }
-main .section-2-homepage .container .container-list .list-even .even-child .content .view-detail {
+main .section-2-homepage .container .container-list .list-event .even-child .content .view-detail {
   font-family: var(--f-body);
   display: flex;
   align-items: center;
@@ -936,7 +938,7 @@ main .section-3-homepage {
   justify-content: center;
 }
 main .section-3-homepage .container {
-  width: 84.5rem;
+  width: 85.5rem;
 }
 main .section-3-homepage .container .title {
   margin-bottom: 1rem;
@@ -1033,7 +1035,7 @@ main .section-4-homepage {
 }
 main .section-4-homepage .container {
   position: relative;
-  width: 84.5rem;
+  width: 85.5rem;
 }
 main .section-4-homepage .container .content {
   position: absolute;
@@ -1258,7 +1260,7 @@ main .section-7-homepage .background {
   background: linear-gradient(0deg, rgba(237, 30, 41, 0.2) 0%, rgba(135, 17, 23, 0) 100%);
 }
 main .section-7-homepage .container {
-  width: 84.5rem;
+  width: 85.5rem;
   z-index: 10;
 }
 main .section-7-homepage .container .container-1 {
@@ -1390,7 +1392,7 @@ main .section-8-homepage {
 }
 main .section-8-homepage .container {
   font-family: var(--f-body);
-  width: 84.5rem;
+  width: 85.5rem;
   z-index: 10;
   position: relative;
 }
@@ -1496,21 +1498,21 @@ main .section-banner .content .text .bot span {
   font-weight: 400;
   line-height: 1.5rem;
 }
-main .container-about, main .container-member, main .container-training, main .container-detail-training, main .container-recruitment, main .container-detail-recruitment, main .container-detail-project, main .container-database, main .container-detail-recipe {
-  max-width: 84.5rem;
+main .container-about, main .container-member, main .container-training, main .container-detail-training, main .container-recruitment, main .container-detail-recruitment, main .container-detail-project, main .container-database, main .container-detail-recipe, main .container-detail-news, main .container-detail-event {
+  max-width: 85.5rem;
   display: flex;
   gap: 3.125rem;
 }
-main .container-about .left, main .container-member .left, main .container-training .left, main .container-detail-training .left, main .container-recruitment .left, main .container-detail-recruitment .left, main .container-detail-project .left, main .container-database .left, main .container-detail-recipe .left {
+main .container-about .left, main .container-member .left, main .container-training .left, main .container-detail-training .left, main .container-recruitment .left, main .container-detail-recruitment .left, main .container-detail-project .left, main .container-database .left, main .container-detail-recipe .left, main .container-detail-news .left, main .container-detail-event .left {
   width: 61.25rem;
 }
-main .container-about .right, main .container-member .right, main .container-training .right, main .container-detail-training .right, main .container-recruitment .right, main .container-detail-recruitment .right, main .container-detail-project .right, main .container-database .right, main .container-detail-recipe .right {
+main .container-about .right, main .container-member .right, main .container-training .right, main .container-detail-training .right, main .container-recruitment .right, main .container-detail-recruitment .right, main .container-detail-project .right, main .container-database .right, main .container-detail-recipe .right, main .container-detail-news .right, main .container-detail-event .right {
   width: 20.375rem;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
-main .container-about .right .categoty-content, main .container-member .right .categoty-content, main .container-training .right .categoty-content, main .container-detail-training .right .categoty-content, main .container-recruitment .right .categoty-content, main .container-detail-recruitment .right .categoty-content, main .container-detail-project .right .categoty-content, main .container-database .right .categoty-content, main .container-detail-recipe .right .categoty-content {
+main .container-about .right .categoty-content, main .container-member .right .categoty-content, main .container-training .right .categoty-content, main .container-detail-training .right .categoty-content, main .container-recruitment .right .categoty-content, main .container-detail-recruitment .right .categoty-content, main .container-detail-project .right .categoty-content, main .container-database .right .categoty-content, main .container-detail-recipe .right .categoty-content, main .container-detail-news .right .categoty-content, main .container-detail-event .right .categoty-content {
   font-family: var(--f-body);
   color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
   width: 13.4375rem;
@@ -1521,65 +1523,65 @@ main .container-about .right .categoty-content, main .container-member .right .c
   background-color: var(--white);
   box-shadow: 0rem 0.25rem 1.25rem 0rem rgba(21, 21, 21, 0.1);
 }
-main .container-about .right .categoty-content .title, main .container-member .right .categoty-content .title, main .container-training .right .categoty-content .title, main .container-detail-training .right .categoty-content .title, main .container-recruitment .right .categoty-content .title, main .container-detail-recruitment .right .categoty-content .title, main .container-detail-project .right .categoty-content .title, main .container-database .right .categoty-content .title, main .container-detail-recipe .right .categoty-content .title {
+main .container-about .right .categoty-content .title, main .container-member .right .categoty-content .title, main .container-training .right .categoty-content .title, main .container-detail-training .right .categoty-content .title, main .container-recruitment .right .categoty-content .title, main .container-detail-recruitment .right .categoty-content .title, main .container-detail-project .right .categoty-content .title, main .container-database .right .categoty-content .title, main .container-detail-recipe .right .categoty-content .title, main .container-detail-news .right .categoty-content .title, main .container-detail-event .right .categoty-content .title {
   padding-bottom: 0.875rem;
   margin-bottom: 1.25rem;
   border-bottom: 0.0625rem solid #BD0F18;
 }
-main .container-about .right .categoty-content .title h3, main .container-member .right .categoty-content .title h3, main .container-training .right .categoty-content .title h3, main .container-detail-training .right .categoty-content .title h3, main .container-recruitment .right .categoty-content .title h3, main .container-detail-recruitment .right .categoty-content .title h3, main .container-detail-project .right .categoty-content .title h3, main .container-database .right .categoty-content .title h3, main .container-detail-recipe .right .categoty-content .title h3 {
+main .container-about .right .categoty-content .title h3, main .container-member .right .categoty-content .title h3, main .container-training .right .categoty-content .title h3, main .container-detail-training .right .categoty-content .title h3, main .container-recruitment .right .categoty-content .title h3, main .container-detail-recruitment .right .categoty-content .title h3, main .container-detail-project .right .categoty-content .title h3, main .container-database .right .categoty-content .title h3, main .container-detail-recipe .right .categoty-content .title h3, main .container-detail-news .right .categoty-content .title h3, main .container-detail-event .right .categoty-content .title h3 {
   font-size: 1.125rem;
   font-weight: 600;
   line-height: 1.6875rem;
 }
-main .container-about .right .categoty-content nav ul, main .container-member .right .categoty-content nav ul, main .container-training .right .categoty-content nav ul, main .container-detail-training .right .categoty-content nav ul, main .container-recruitment .right .categoty-content nav ul, main .container-detail-recruitment .right .categoty-content nav ul, main .container-detail-project .right .categoty-content nav ul, main .container-database .right .categoty-content nav ul, main .container-detail-recipe .right .categoty-content nav ul {
+main .container-about .right .categoty-content nav ul, main .container-member .right .categoty-content nav ul, main .container-training .right .categoty-content nav ul, main .container-detail-training .right .categoty-content nav ul, main .container-recruitment .right .categoty-content nav ul, main .container-detail-recruitment .right .categoty-content nav ul, main .container-detail-project .right .categoty-content nav ul, main .container-database .right .categoty-content nav ul, main .container-detail-recipe .right .categoty-content nav ul, main .container-detail-news .right .categoty-content nav ul, main .container-detail-event .right .categoty-content nav ul {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
 }
-main .container-about .right .categoty-content nav ul li, main .container-member .right .categoty-content nav ul li, main .container-training .right .categoty-content nav ul li, main .container-detail-training .right .categoty-content nav ul li, main .container-recruitment .right .categoty-content nav ul li, main .container-detail-recruitment .right .categoty-content nav ul li, main .container-detail-project .right .categoty-content nav ul li, main .container-database .right .categoty-content nav ul li, main .container-detail-recipe .right .categoty-content nav ul li {
+main .container-about .right .categoty-content nav ul li, main .container-member .right .categoty-content nav ul li, main .container-training .right .categoty-content nav ul li, main .container-detail-training .right .categoty-content nav ul li, main .container-recruitment .right .categoty-content nav ul li, main .container-detail-recruitment .right .categoty-content nav ul li, main .container-detail-project .right .categoty-content nav ul li, main .container-database .right .categoty-content nav ul li, main .container-detail-recipe .right .categoty-content nav ul li, main .container-detail-news .right .categoty-content nav ul li, main .container-detail-event .right .categoty-content nav ul li {
   font-size: 1rem;
   font-weight: 600;
   line-height: 1.5rem;
 }
-main .container-about .right .categoty-content nav ul li.active, main .container-about .right .categoty-content nav ul li:hover, main .container-member .right .categoty-content nav ul li.active, main .container-member .right .categoty-content nav ul li:hover, main .container-training .right .categoty-content nav ul li.active, main .container-training .right .categoty-content nav ul li:hover, main .container-detail-training .right .categoty-content nav ul li.active, main .container-detail-training .right .categoty-content nav ul li:hover, main .container-recruitment .right .categoty-content nav ul li.active, main .container-recruitment .right .categoty-content nav ul li:hover, main .container-detail-recruitment .right .categoty-content nav ul li.active, main .container-detail-recruitment .right .categoty-content nav ul li:hover, main .container-detail-project .right .categoty-content nav ul li.active, main .container-detail-project .right .categoty-content nav ul li:hover, main .container-database .right .categoty-content nav ul li.active, main .container-database .right .categoty-content nav ul li:hover, main .container-detail-recipe .right .categoty-content nav ul li.active, main .container-detail-recipe .right .categoty-content nav ul li:hover {
+main .container-about .right .categoty-content nav ul li.active, main .container-about .right .categoty-content nav ul li:hover, main .container-member .right .categoty-content nav ul li.active, main .container-member .right .categoty-content nav ul li:hover, main .container-training .right .categoty-content nav ul li.active, main .container-training .right .categoty-content nav ul li:hover, main .container-detail-training .right .categoty-content nav ul li.active, main .container-detail-training .right .categoty-content nav ul li:hover, main .container-recruitment .right .categoty-content nav ul li.active, main .container-recruitment .right .categoty-content nav ul li:hover, main .container-detail-recruitment .right .categoty-content nav ul li.active, main .container-detail-recruitment .right .categoty-content nav ul li:hover, main .container-detail-project .right .categoty-content nav ul li.active, main .container-detail-project .right .categoty-content nav ul li:hover, main .container-database .right .categoty-content nav ul li.active, main .container-database .right .categoty-content nav ul li:hover, main .container-detail-recipe .right .categoty-content nav ul li.active, main .container-detail-recipe .right .categoty-content nav ul li:hover, main .container-detail-news .right .categoty-content nav ul li.active, main .container-detail-news .right .categoty-content nav ul li:hover, main .container-detail-event .right .categoty-content nav ul li.active, main .container-detail-event .right .categoty-content nav ul li:hover {
   color: var(--Primary-Color-500, #ED1E29);
   font-size: 1rem;
   line-height: 1.5rem;
 }
-main .container-about .right .popular-news, main .container-member .right .popular-news, main .container-training .right .popular-news, main .container-detail-training .right .popular-news, main .container-recruitment .right .popular-news, main .container-detail-recruitment .right .popular-news, main .container-detail-project .right .popular-news, main .container-database .right .popular-news, main .container-detail-recipe .right .popular-news {
+main .container-about .right .popular-news, main .container-member .right .popular-news, main .container-training .right .popular-news, main .container-detail-training .right .popular-news, main .container-recruitment .right .popular-news, main .container-detail-recruitment .right .popular-news, main .container-detail-project .right .popular-news, main .container-database .right .popular-news, main .container-detail-recipe .right .popular-news, main .container-detail-news .right .popular-news, main .container-detail-event .right .popular-news {
   font-family: var(--f-body);
   color: var(--black);
 }
-main .container-about .right .popular-news .title, main .container-member .right .popular-news .title, main .container-training .right .popular-news .title, main .container-detail-training .right .popular-news .title, main .container-recruitment .right .popular-news .title, main .container-detail-recruitment .right .popular-news .title, main .container-detail-project .right .popular-news .title, main .container-database .right .popular-news .title, main .container-detail-recipe .right .popular-news .title {
+main .container-about .right .popular-news .title, main .container-member .right .popular-news .title, main .container-training .right .popular-news .title, main .container-detail-training .right .popular-news .title, main .container-recruitment .right .popular-news .title, main .container-detail-recruitment .right .popular-news .title, main .container-detail-project .right .popular-news .title, main .container-database .right .popular-news .title, main .container-detail-recipe .right .popular-news .title, main .container-detail-news .right .popular-news .title, main .container-detail-event .right .popular-news .title {
   margin-bottom: 1.875rem;
 }
-main .container-about .right .popular-news .title h3, main .container-member .right .popular-news .title h3, main .container-training .right .popular-news .title h3, main .container-detail-training .right .popular-news .title h3, main .container-recruitment .right .popular-news .title h3, main .container-detail-recruitment .right .popular-news .title h3, main .container-detail-project .right .popular-news .title h3, main .container-database .right .popular-news .title h3, main .container-detail-recipe .right .popular-news .title h3 {
+main .container-about .right .popular-news .title h3, main .container-member .right .popular-news .title h3, main .container-training .right .popular-news .title h3, main .container-detail-training .right .popular-news .title h3, main .container-recruitment .right .popular-news .title h3, main .container-detail-recruitment .right .popular-news .title h3, main .container-detail-project .right .popular-news .title h3, main .container-database .right .popular-news .title h3, main .container-detail-recipe .right .popular-news .title h3, main .container-detail-news .right .popular-news .title h3, main .container-detail-event .right .popular-news .title h3 {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 2rem;
 }
-main .container-about .right .popular-news .list-news, main .container-member .right .popular-news .list-news, main .container-training .right .popular-news .list-news, main .container-detail-training .right .popular-news .list-news, main .container-recruitment .right .popular-news .list-news, main .container-detail-recruitment .right .popular-news .list-news, main .container-detail-project .right .popular-news .list-news, main .container-database .right .popular-news .list-news, main .container-detail-recipe .right .popular-news .list-news {
+main .container-about .right .popular-news .list-news, main .container-member .right .popular-news .list-news, main .container-training .right .popular-news .list-news, main .container-detail-training .right .popular-news .list-news, main .container-recruitment .right .popular-news .list-news, main .container-detail-recruitment .right .popular-news .list-news, main .container-detail-project .right .popular-news .list-news, main .container-database .right .popular-news .list-news, main .container-detail-recipe .right .popular-news .list-news, main .container-detail-news .right .popular-news .list-news, main .container-detail-event .right .popular-news .list-news {
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
 }
-main .container-about .right .popular-news .list-news .child, main .container-member .right .popular-news .list-news .child, main .container-training .right .popular-news .list-news .child, main .container-detail-training .right .popular-news .list-news .child, main .container-recruitment .right .popular-news .list-news .child, main .container-detail-recruitment .right .popular-news .list-news .child, main .container-detail-project .right .popular-news .list-news .child, main .container-database .right .popular-news .list-news .child, main .container-detail-recipe .right .popular-news .list-news .child {
+main .container-about .right .popular-news .list-news .child, main .container-member .right .popular-news .list-news .child, main .container-training .right .popular-news .list-news .child, main .container-detail-training .right .popular-news .list-news .child, main .container-recruitment .right .popular-news .list-news .child, main .container-detail-recruitment .right .popular-news .list-news .child, main .container-detail-project .right .popular-news .list-news .child, main .container-database .right .popular-news .list-news .child, main .container-detail-recipe .right .popular-news .list-news .child, main .container-detail-news .right .popular-news .list-news .child, main .container-detail-event .right .popular-news .list-news .child {
   font-family: var(--f-body);
   display: flex;
   gap: 1.25rem;
   height: 6.625rem;
 }
-main .container-about .right .popular-news .list-news .child img, main .container-member .right .popular-news .list-news .child img, main .container-training .right .popular-news .list-news .child img, main .container-detail-training .right .popular-news .list-news .child img, main .container-recruitment .right .popular-news .list-news .child img, main .container-detail-recruitment .right .popular-news .list-news .child img, main .container-detail-project .right .popular-news .list-news .child img, main .container-database .right .popular-news .list-news .child img, main .container-detail-recipe .right .popular-news .list-news .child img {
-  width: 6.75rem;
+main .container-about .right .popular-news .list-news .child img, main .container-member .right .popular-news .list-news .child img, main .container-training .right .popular-news .list-news .child img, main .container-detail-training .right .popular-news .list-news .child img, main .container-recruitment .right .popular-news .list-news .child img, main .container-detail-recruitment .right .popular-news .list-news .child img, main .container-detail-project .right .popular-news .list-news .child img, main .container-database .right .popular-news .list-news .child img, main .container-detail-recipe .right .popular-news .list-news .child img, main .container-detail-news .right .popular-news .list-news .child img, main .container-detail-event .right .popular-news .list-news .child img {
+  width: 6.375rem;
   height: inherit;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
 }
-main .container-about .right .popular-news .list-news .child .infor, main .container-member .right .popular-news .list-news .child .infor, main .container-training .right .popular-news .list-news .child .infor, main .container-detail-training .right .popular-news .list-news .child .infor, main .container-recruitment .right .popular-news .list-news .child .infor, main .container-detail-recruitment .right .popular-news .list-news .child .infor, main .container-detail-project .right .popular-news .list-news .child .infor, main .container-database .right .popular-news .list-news .child .infor, main .container-detail-recipe .right .popular-news .list-news .child .infor {
+main .container-about .right .popular-news .list-news .child .infor, main .container-member .right .popular-news .list-news .child .infor, main .container-training .right .popular-news .list-news .child .infor, main .container-detail-training .right .popular-news .list-news .child .infor, main .container-recruitment .right .popular-news .list-news .child .infor, main .container-detail-recruitment .right .popular-news .list-news .child .infor, main .container-detail-project .right .popular-news .list-news .child .infor, main .container-database .right .popular-news .list-news .child .infor, main .container-detail-recipe .right .popular-news .list-news .child .infor, main .container-detail-news .right .popular-news .list-news .child .infor, main .container-detail-event .right .popular-news .list-news .child .infor {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 14px;
 }
-main .container-about .right .popular-news .list-news .child .infor .title-news h4, main .container-member .right .popular-news .list-news .child .infor .title-news h4, main .container-training .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-training .right .popular-news .list-news .child .infor .title-news h4, main .container-recruitment .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-recruitment .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-project .right .popular-news .list-news .child .infor .title-news h4, main .container-database .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-recipe .right .popular-news .list-news .child .infor .title-news h4 {
+main .container-about .right .popular-news .list-news .child .infor .title-news h4, main .container-member .right .popular-news .list-news .child .infor .title-news h4, main .container-training .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-training .right .popular-news .list-news .child .infor .title-news h4, main .container-recruitment .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-recruitment .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-project .right .popular-news .list-news .child .infor .title-news h4, main .container-database .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-recipe .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-news .right .popular-news .list-news .child .infor .title-news h4, main .container-detail-event .right .popular-news .list-news .child .infor .title-news h4 {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -1590,23 +1592,23 @@ main .container-about .right .popular-news .list-news .child .infor .title-news 
   font-weight: 700;
   line-height: 1.5rem;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views, main .container-member .right .popular-news .list-news .child .infor .date-and-views, main .container-training .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views, main .container-database .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views, main .container-member .right .popular-news .list-news .child .infor .date-and-views, main .container-training .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views, main .container-database .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-news .right .popular-news .list-news .child .infor .date-and-views, main .container-detail-event .right .popular-news .list-news .child .infor .date-and-views {
   display: flex;
   gap: 0.5rem;
   font-size: 0.875rem;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views > p, main .container-member .right .popular-news .list-news .child .infor .date-and-views > p, main .container-training .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views > p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views > p, main .container-database .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views > p {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views > p, main .container-member .right .popular-news .list-news .child .infor .date-and-views > p, main .container-training .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views > p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views > p, main .container-database .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-news .right .popular-news .list-news .child .infor .date-and-views > p, main .container-detail-event .right .popular-news .list-news .child .infor .date-and-views > p {
   color: #515151;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views .date, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date, main .container-training .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .date, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views .date, main .container-database .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views .date {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .date, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date, main .container-training .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .date, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views .date, main .container-database .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-news .right .popular-news .list-news .child .infor .date-and-views .date, main .container-detail-event .right .popular-news .list-news .child .infor .date-and-views .date {
   display: flex;
   gap: 0.75rem;
   color: #ED1E29;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-training .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-database .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views .date p {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-training .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-database .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-news .right .popular-news .list-news .child .infor .date-and-views .date p, main .container-detail-event .right .popular-news .list-news .child .infor .date-and-views .date p {
   width: 5.3125rem;
 }
-main .container-about .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-training .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-database .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views .views p {
+main .container-about .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-member .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-training .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-training .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-recruitment .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-recruitment .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-project .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-database .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-recipe .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-news .right .popular-news .list-news .child .infor .date-and-views .views p, main .container-detail-event .right .popular-news .list-news .child .infor .date-and-views .views p {
   color: #515151;
   width: 3.625rem;
 }
@@ -1659,7 +1661,7 @@ main .section-2-about {
 }
 main .section-2-about .container {
   font-family: var(--f-body);
-  width: 84.5rem;
+  width: 85.5rem;
   padding-top: 4.625rem;
   padding-bottom: 9.375rem;
 }
@@ -3619,7 +3621,7 @@ main .section-list-project, main .section-project {
   justify-content: center;
 }
 main .section-list-project .container-project, main .section-project .container-project {
-  width: 84.5rem;
+  width: 85.5rem;
   font-family: var(--f-body);
 }
 main .section-list-project .container-project .type, main .section-project .container-project .type {
@@ -4160,6 +4162,7 @@ main .section-detail-recipe .container-detail-recipe {
   border-bottom: 2px solid #D9D9D9;
   position: relative;
   font-family: var(--f-body);
+  padding-bottom: 5rem;
 }
 main .section-detail-recipe .container-detail-recipe .bot {
   position: absolute;
@@ -4286,7 +4289,6 @@ main .section-detail-recipe .container-detail-recipe .left .content p.conclusion
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5rem;
-  margin-bottom: 5rem;
 }
 main .section-detail-recipe .container-detail-recipe .right {
   margin-top: 2rem;
@@ -4374,6 +4376,288 @@ main .section-detail-recipe .recipe-relate .list-recipe .recipe img {
   flex-shrink: 0;
   border-radius: 11.25rem;
 }
+main .section-list-event, main .section-event {
+  margin-top: 6.25rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  justify-content: center;
+}
+main .section-list-event .container-event, main .section-event .container-event {
+  width: 85.5rem;
+  font-family: var(--f-body);
+}
+main .section-list-event .container-event .type, main .section-event .container-event .type {
+  margin-bottom: 6.25rem;
+}
+main .section-list-event .container-event .type h2, main .section-event .container-event .type h2 {
+  color: var(--Text-content, #303030);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin-bottom: 3rem;
+}
+main .section-list-event .container-event .type .list-event, main .section-event .container-event .type .list-event {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 6.25rem;
+}
+main .section-list-event .container-event .type .list-event .even-child, main .section-event .container-event .type .list-event .even-child {
+  display: flex;
+  flex-direction: column;
+}
+main .section-list-event .container-event .type .list-event .even-child img, main .section-event .container-event .type .list-event .even-child img {
+  width: 27.5rem;
+  height: 20rem;
+  border-radius: 16px 16px 0px 0px;
+}
+main .section-list-event .container-event .type .list-event .even-child .content, main .section-event .container-event .type .list-event .even-child .content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .title h3, main .section-event .container-event .type .list-event .even-child .content .title h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  font-family: var(--f-body);
+  color: var(--black);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .infor, main .section-event .container-event .type .list-event .even-child .content .infor {
+  font-family: var(--f-body);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .infor .date-and-address, main .section-event .container-event .type .list-event .even-child .content .infor .date-and-address {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .infor .date-and-address .date, main .section-event .container-event .type .list-event .even-child .content .infor .date-and-address .date {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .infor .date-and-address .address, main .section-event .container-event .type .list-event .even-child .content .infor .date-and-address .address {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .infor .organizer, main .section-event .container-event .type .list-event .even-child .content .infor .organizer {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .infor .organizer .dot, main .section-event .container-event .type .list-event .even-child .content .infor .organizer .dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.375rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .infor p.description, main .section-event .container-event .type .list-event .even-child .content .infor p.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-list-event .container-event .type .list-event .even-child .content .view-detail, main .section-event .container-event .type .list-event .even-child .content .view-detail {
+  font-family: var(--f-body);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #ED1E29;
+}
+main .section-list-event .container-event .view-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .section-list-event .container-event .view-more a {
+  color: #ED1E29;
+  border: 1px solid #ED1E29;
+  background-color: var(--white);
+  padding: 0.6875rem 3rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  line-height: 1.375rem;
+  border-radius: 3.125rem;
+}
+main .section-list-event .container-event .view-more a:hover {
+  background-color: #ED1E29;
+  color: var(--white);
+}
+main .section-event .pagination {
+  justify-content: center;
+}
+main .section-detail-event {
+  margin-top: 15rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .section-detail-event .container-detail-event {
+  border-bottom: 2px solid #D9D9D9;
+  position: relative;
+  font-family: var(--f-body);
+  padding-bottom: 7.1875rem;
+}
+main .section-detail-event .container-detail-event .bot {
+  position: absolute;
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-event .container-detail-event .bot a {
+  color: #4D4D4D;
+}
+main .section-detail-event .container-detail-event .bot a.active {
+  color: #ED1E29;
+}
+main .section-detail-event .container-detail-event .left {
+  position: relative;
+  margin-top: 2rem;
+}
+main .section-detail-event .container-detail-event .left h2.title {
+  color: #303030;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 1.5rem;
+  width: 47.5rem;
+  margin-bottom: 3rem;
+}
+main .section-detail-event .container-detail-event .left .main-image {
+  width: inherit;
+  height: 28.75rem;
+  margin-bottom: 1.5rem;
+}
+main .section-detail-event .container-detail-event .left .main-image img {
+  width: 100%;
+  height: inherit;
+}
+main .section-detail-event .container-detail-event .left .icon-social-media {
+  position: absolute;
+  left: 0;
+  bottom: -4.0625rem;
+}
+main .section-detail-event .container-detail-event .rigth {
+  margin-top: 2rem;
+}
+main .section-detail-event .event-relate {
+  margin-top: 3rem;
+  font-family: var(--f-body);
+}
+main .section-detail-event .event-relate h3.title {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin-bottom: 3rem;
+}
+main .section-detail-event .event-relate .list-event {
+  width: 1368px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 6.25rem;
+}
+main .section-detail-event .event-relate .list-event .even-child {
+  display: flex;
+  flex-direction: column;
+}
+main .section-detail-event .event-relate .list-event .even-child img {
+  width: 27.5rem;
+  height: 20rem;
+  border-radius: 16px 16px 0px 0px;
+}
+main .section-detail-event .event-relate .list-event .even-child .content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .title h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  font-family: var(--f-body);
+  color: var(--black);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.625rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .infor {
+  font-family: var(--f-body);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .infor .date-and-address {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .infor .date-and-address .date {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .infor .date-and-address .address {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .infor .organizer {
+  display: flex;
+  gap: 0.5rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .infor .organizer .dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.375rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .infor p.description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-event .event-relate .list-event .even-child .content .view-detail {
+  font-family: var(--f-body);
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #ED1E29;
+}
 main .section-news {
   margin-top: 6.25rem;
   margin-bottom: 9.3125rem;
@@ -4381,7 +4665,7 @@ main .section-news {
   justify-content: center;
 }
 main .section-news .container-news {
-  width: 84.5rem;
+  width: 85.5rem;
   font-family: var(--f-body);
 }
 main .section-news .container-news .latest-news {
@@ -4403,7 +4687,6 @@ main .section-news .container-news .latest-news .list-news .news-left {
   width: 40rem;
 }
 main .section-news .container-news .latest-news .list-news .news-left img {
-  width: inherit;
   height: 21.25rem;
   border-radius: 1rem;
   margin-bottom: 1.5rem;
@@ -4414,7 +4697,7 @@ main .section-news .container-news .latest-news .list-news .news-left .news-cont
   gap: 1rem;
   width: inherit;
 }
-main .section-news .container-news .latest-news .list-news .news-left .news-content .title h3 {
+main .section-news .container-news .latest-news .list-news .news-left .news-content h3.title {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -4465,9 +4748,10 @@ main .section-news .container-news .latest-news .list-news .news-right .news-top
 }
 main .section-news .container-news .latest-news .list-news .news-right .news-top img, main .section-news .container-news .latest-news .list-news .news-right .news-bottom img {
   width: 14.5rem;
+  height: 14.5rem;
   border-radius: 1rem;
 }
-main .section-news .container-news .latest-news .list-news .news-right .news-top .news-content .title h3, main .section-news .container-news .latest-news .list-news .news-right .news-bottom .news-content .title h3 {
+main .section-news .container-news .latest-news .list-news .news-right .news-top .news-content h3.title, main .section-news .container-news .latest-news .list-news .news-right .news-bottom .news-content h3.title {
   width: 21.25rem;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -4496,18 +4780,18 @@ main .section-news .container-news .latest-news .list-news .news-right .news-top
   font-weight: 400;
   line-height: 1.5rem;
 }
-main .section-news .container-news .latest-news .list-news .news-right .news-top .date-and-views, main .section-news .container-news .latest-news .list-news .news-right .news-bottom .date-and-views {
+main .section-news .container-news .latest-news .list-news .news-right .news-top .news-content .date-and-views, main .section-news .container-news .latest-news .list-news .news-right .news-bottom .news-content .date-and-views {
   display: flex;
   gap: 0.375rem;
 }
-main .section-news .container-news .latest-news .list-news .news-right .news-top .date-and-views .date, main .section-news .container-news .latest-news .list-news .news-right .news-bottom .date-and-views .date {
+main .section-news .container-news .latest-news .list-news .news-right .news-top .news-content .date-and-views .date, main .section-news .container-news .latest-news .list-news .news-right .news-bottom .news-content .date-and-views .date {
   display: flex;
   gap: 0.75rem;
   color: #ED1E29;
 }
-main .section-news .container-news .latest-news .list-news .news-right .news-top .date-and-views > p,
-main .section-news .container-news .latest-news .list-news .news-right .news-top .date-and-views .views p, main .section-news .container-news .latest-news .list-news .news-right .news-bottom .date-and-views > p,
-main .section-news .container-news .latest-news .list-news .news-right .news-bottom .date-and-views .views p {
+main .section-news .container-news .latest-news .list-news .news-right .news-top .news-content .date-and-views > p,
+main .section-news .container-news .latest-news .list-news .news-right .news-top .news-content .date-and-views .views p, main .section-news .container-news .latest-news .list-news .news-right .news-bottom .news-content .date-and-views > p,
+main .section-news .container-news .latest-news .list-news .news-right .news-bottom .news-content .date-and-views .views p {
   color: #515151;
 }
 main .section-news .container-news .bottom {
@@ -4528,6 +4812,7 @@ main .section-news .container-news .bottom .top-news .list-news {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-bottom: 3.125rem;
 }
 main .section-news .container-news .bottom .top-news .list-news .news {
   display: flex;
@@ -4578,9 +4863,12 @@ main .section-news .container-news .bottom .top-news .list-news .news .news-cont
 main .section-news .container-news .bottom .top-news .list-news .news .news-content .date-and-views .views p {
   color: #515151;
 }
+main .section-news .container-news .bottom .top-news .pagination {
+  justify-content: center;
+}
 main .section-news .container-news .bottom .right {
   margin-top: 1.375rem;
-  width: 27.5rem;
+  width: 28rem;
 }
 main .section-news .container-news .bottom .right .social-media {
   position: relative;
@@ -4601,6 +4889,7 @@ main .section-news .container-news .bottom .right .social-media .infor .left {
   height: 3.75rem;
 }
 main .section-news .container-news .bottom .right .social-media .infor .right {
+  width: 6.25rem;
   margin-top: 0;
   color: var(--white);
 }
@@ -4670,6 +4959,221 @@ main .section-news .container-news .bottom .right .connet a.view {
   font-weight: 600;
   line-height: 1.625rem;
   letter-spacing: 0.14px;
+}
+main .section-news .container-news .bottom .right .popular-news {
+  font-family: var(--f-body);
+  color: var(--black);
+}
+main .section-news .container-news .bottom .right .popular-news .title {
+  margin-bottom: 1.875rem;
+}
+main .section-news .container-news .bottom .right .popular-news .title h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 2rem;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news {
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child {
+  font-family: var(--f-body);
+  display: flex;
+  gap: 1.25rem;
+  height: 6.625rem;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child img {
+  width: 6.75rem;
+  height: inherit;
+  border-radius: 0.5rem;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child .infor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child .infor .title-news h4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  color: var(--black);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child .infor .date-and-views {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child .infor .date-and-views > p {
+  color: #515151;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child .infor .date-and-views .date {
+  display: flex;
+  gap: 0.75rem;
+  color: #ED1E29;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child .infor .date-and-views .date p {
+  width: 5.3125rem;
+}
+main .section-news .container-news .bottom .right .popular-news .list-news .child .infor .date-and-views .views p {
+  color: #515151;
+  width: 3.625rem;
+}
+main .section-detail-news {
+  margin-top: 15rem;
+  margin-bottom: 9.3125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .section-detail-news .container-detail-news {
+  border-bottom: 2px solid #D9D9D9;
+  gap: 5rem !important;
+  position: relative;
+  font-family: var(--f-body);
+  padding-bottom: 5rem;
+}
+main .section-detail-news .container-detail-news .bot {
+  position: absolute;
+  display: flex;
+  gap: 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+main .section-detail-news .container-detail-news .bot a {
+  color: #4D4D4D;
+}
+main .section-detail-news .container-detail-news .bot a.active {
+  color: #ED1E29;
+}
+main .section-detail-news .container-detail-news .left {
+  margin-top: 2rem;
+}
+main .section-detail-news .container-detail-news .left h2.title {
+  color: #303030;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.875rem;
+  margin-bottom: 1.25rem;
+}
+main .section-detail-news .container-detail-news .left .infor {
+  display: flex;
+  gap: 3.75rem;
+  margin-bottom: 1.5rem;
+}
+main .section-detail-news .container-detail-news .left .infor .date-and-views {
+  font-family: var(--f-body);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+}
+main .section-detail-news .container-detail-news .left .infor .date-and-views > p {
+  color: #515151;
+}
+main .section-detail-news .container-detail-news .left .infor .date-and-views .date {
+  display: flex;
+  gap: 0.75rem;
+  color: #ED1E29;
+}
+main .section-detail-news .container-detail-news .left .infor .date-and-views .views p {
+  color: #515151;
+}
+main .section-detail-news .container-detail-news .left .infor .share {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+main .section-detail-news .container-detail-news .left .infor .share p {
+  color: var(--Text-700, var(--Color-Gray-700, #4D4D4D));
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3125rem;
+}
+main .section-detail-news .container-detail-news .right {
+  margin-top: 2rem;
+}
+main .section-detail-news .news-relate {
+  width: 85.5rem;
+  margin-top: 3rem;
+  font-family: var(--f-body);
+}
+main .section-detail-news .news-relate h3.title {
+  color: #000;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 3.75rem;
+  margin-bottom: 3rem;
+}
+main .section-detail-news .news-relate .list-news {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+main .section-detail-news .news-relate .list-news .child {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+main .section-detail-news .news-relate .list-news .child a {
+  width: 100%;
+  height: 17.5rem;
+  border-radius: 1rem;
+}
+main .section-detail-news .news-relate .list-news .child a img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+main .section-detail-news .news-relate .list-news .child .infor {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .section-detail-news .news-relate .list-news .child .infor h4.title-news {
+  color: #303030;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+}
+main .section-detail-news .news-relate .list-news .child .infor p.content {
+  color: #303030;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
+main .section-detail-news .news-relate .list-news .child .infor .date-and-views {
+  display: flex;
+  gap: 0.375rem;
+  font-size: 1rem;
+}
+main .section-detail-news .news-relate .list-news .child .infor .date-and-views > p {
+  color: #515151;
+}
+main .section-detail-news .news-relate .list-news .child .infor .date-and-views .date {
+  display: flex;
+  gap: 0.75rem;
+  color: #ED1E29;
+}
+main .section-detail-news .news-relate .list-news .child .infor .date-and-views .views p {
+  color: #515151;
 }
 main .login-page {
   position: relative;
