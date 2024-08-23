@@ -14,6 +14,10 @@
                 <a href="">
                     Sự kiện
                 </a>
+                <span>/</span>
+                <a href=""> 
+                    Sự kiện nổi bật
+                </a>
             </div>
         </div>
     </div>

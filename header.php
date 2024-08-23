@@ -41,7 +41,7 @@
                         <input type="text" class="input-1" id="search" placeholder="Tìm kiếm">
                     </form>
                 </div>
-                <a class="contact" href="#">Liên hệ</a>
+                <a class="contact" href="http://localhost/project-vica/contact.php">Liên hệ</a>
                 <a class="sign-in" href="http://localhost/project-vica/login.php">Đăng nhập</a>
             </div>
             <div class="logo-container">
@@ -72,7 +72,7 @@
                 </svg>
             </div>
         </div>
-        <div id="backdrop-menu" class="backdrop"></div>
+        <div id="backdrop-menu" class="backdrop-menu"></div>
         <div id="menuHeader" class="menu-mobile">
             <div class="top">
                 <img src="asset/image/logo.png" alt="VICA Logo" class="logo">

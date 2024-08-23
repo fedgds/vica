@@ -29,6 +29,40 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // End modal menu header
 
+// Tab navigation about
+document.addEventListener('DOMContentLoaded', function () {
+    const tabMission = document.getElementById('tab-mission');
+    const tabRole = document.getElementById('tab-role');
+    const tabMainActivities = document.getElementById('tab-main-activities');
+
+    const mission = document.getElementById('mission');
+    const role = document.getElementById('role');
+    const mainActivities = document.getElementById('main-activities');
+
+    tabMission.addEventListener('click', () => {
+        setActiveTab(tabMission, mission);
+    });
+
+    tabRole.addEventListener('click', () => {
+        setActiveTab(tabRole, role);
+    });
+
+    tabMainActivities.addEventListener('click', () => {
+        setActiveTab(tabMainActivities, mainActivities);
+    });
+
+    function setActiveTab(tab, content) {
+        // Remove active class from all tabs and contents
+        document.querySelectorAll('.nav-about li').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.bottom').forEach(c => c.classList.remove('active'));
+
+        // Add active class to clicked tab and corresponding content
+        tab.classList.add('active');
+        content.classList.add('active');
+    }
+});
+// End tab navigation about
+
 // Modal forgot password page
 document.addEventListener('DOMContentLoaded', function () {
     const openFormForgotPassword = document.querySelector('#open-modal-forgot-password');
@@ -213,10 +247,9 @@ document.addEventListener('DOMContentLoaded', function () {
         content.classList.add('active');
     }
 });
-
 // End tab navigation profile page
 
-// Modal modal form subscribe
+// Modal form subscribe
 document.addEventListener('DOMContentLoaded', function () {
     const openForm = document.querySelector('#open-form-subscribe');
     const closeForm = document.querySelector('#colse-form-subscribe');
@@ -245,8 +278,35 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-// End modal modal form subscribe
+// End modal form subscribe
 
+// Question and answer contact page
+document.addEventListener('DOMContentLoaded', function () {
+    const children = document.querySelectorAll('.child-faq');
+
+    children.forEach(child => {
+        const openAnswer = child.querySelector('.plus-icon');
+        const closeAnswer = child.querySelector('.minus-icon');
+        const answer = child.querySelector('#answer-question');
+
+        function showAnswer() {
+            answer.classList.add('show');  
+            openAnswer.classList.add('hide');  
+            closeAnswer.classList.add('show');  
+        }
+
+        function hideAnswer() {
+            answer.classList.remove('show');
+            openAnswer.classList.remove('hide');  
+            closeAnswer.classList.remove('show');  
+        }
+
+        openAnswer.addEventListener('click', showAnswer);
+        closeAnswer.addEventListener('click', hideAnswer);
+    });
+});
+
+// End question and answer contact page
 var viewportWidth = window.innerWidth;
 
 console.log('Chiều rộng của viewport: ' + viewportWidth + 'px');

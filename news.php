@@ -270,7 +270,7 @@
                             <p>Sign up</p>
                         </a>
                     </div>
-                    <div class="connet">
+                    <div class="connect">
                         <h3>taste vIETNAM WITH US</h3>
                         <a href="" class="view">
                             Xem ngay

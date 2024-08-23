@@ -1,12 +1,11 @@
 <?php include('header.php') ?>
 <main>
-    <section class="login-page">
-        <div id="backdrop-forgot-password" class="backdrop"></div>
+    <section class="sign-up-page">
         <div class="left">
             <div class="background"></div>
             <div class="container">
                 <h2 class="title">
-                    Đăng nhập
+                    Đăng ký
                 </h2>
                 <div class="description">
                     <p>Torem ipsum dolor sit amet, consectetur adipiscing.</p>
@@ -20,15 +19,12 @@
                         <label for="password">Mật khẩu</label>
                         <input type="password" id="password" placeholder="123456789">
                     </div>
-                    <div class="login-options">
-                        <div class="remember-me">
-                            <input type="checkbox" id="remember-me" checked>
-                            <label for="remember-me">Ghi nhớ đăng nhập</label>
-                        </div>
-                        <p class="forgot-password" id="open-modal-forgot-password">Quên mật khẩu</p>
+                    <div class="re-password">
+                        <label for="re-password">Nhập lại mật khẩu</label>
+                        <input type="re-password" id="re-password" placeholder="123456789">
                     </div>
                     <div class="button">
-                        <button class="login">Đăng nhập</button>
+                        <button class="register">Đăng ký</button>
                         <button class="loginWithGoogle">
                             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
                                 <path d="M23.0005 12.2336C23.0005 11.3702 22.9291 10.7402 22.7744 10.0869H12.7148V13.9835H18.6196C18.5006 14.9519 17.8577 16.4102 16.4291 17.3902L16.4091 17.5206L19.5897 19.9354L19.8101 19.9569C21.8338 18.1252 23.0005 15.4302 23.0005 12.2336Z" fill="#4285F4"/>
@@ -39,9 +35,9 @@
                             <p>Đăng nhập bằng Google</p>
                         </button>
                     </div>
-                    <div class="register">
-                        <p>Bạn chưa có tài khoản?</p>
-                        <a href="http://localhost/project-vica/signup.php">Đăng ký ngay</a>
+                    <div class="login">
+                        <p>Bạn đã có tài khoản?</p>
+                        <a href="http://localhost/project-vica/login.php">Đăng nhập ngay</a>
                     </div>
                 </form>
             </div>
@@ -85,50 +81,6 @@
                 </div>
                 <div class="vica">
                     <h3>VICA</h3>
-                </div>
-            </div>
-        </div>
-        <div id="forgotPasswordModal" class="section-forgot-password">
-            <div class="container">
-                <div class="slider">
-                    <img src="asset/image/slide-forgot-password1.png" alt="">
-                </div>
-                <div class="form">
-                    <span class="close" id="close-modal-forgot-password">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="41" height="40" viewBox="0 0 41 40" fill="none">
-                            <path d="M30.5 30L10.5 10" stroke="#160042" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M10.5 30L30.5 10" stroke="#160042" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </span>
-                    <form action="">
-                        <div class="title">
-                            <h2>Quên mật khẩu</h2>
-                        </div>
-                        <div class="input">
-                            <div class="step-1">
-                                <label for="email-forgot-password">Nhập e-mail</label>
-                                <input type="text" id="email-forgot-password" placeholder="abcd1234@gmail.com">
-                            </div>
-                            <div class="step-2">
-                                <div class="new-password">
-                                    <label for="new-password">Nhập mật khẩu mới</label>
-                                    <input type="text" id="new-password" placeholder="abcd1234@gmail.com">
-                                </div>
-                                <div class="confirm-password">
-                                    <label for="confirm-password">Xác nhận</label>
-                                    <input type="password" id="confirm-password" placeholder="abcd1234@gmail.com">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="button">
-                            <button class="forgot-password">Quên mật khẩu</button>
-                            <span class="back" id="back-to-login">Quay lại đăng nhập</span>
-                        </div>
-                        <div class="register">
-                            <p>Bạn chưa có tài khoản?</p>
-                            <a href="">Đăng ký ngay</a>
-                        </div>
-                    </form>
                 </div>
             </div>
         </div>

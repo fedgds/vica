@@ -242,9 +242,9 @@
                                 </svg>
                                 <p>Online</p>
                             </div>
-                            <div class="description">
-                                <p>Tổ chức các chương trình đào tạo và cấp chứng chỉ theo chuẩn chương trình trong nước, quốc tế….</p>
-                            </div>
+                            <p class="description">
+                                Tổ chức các chương trình đào tạo và cấp chứng chỉ theo chuẩn chương trình trong nước, bla bla bla bla
+                            </p>
                         </div>
                         <div class="view-detail">
                             <a href="">Xem chi tiết</a>
@@ -291,9 +291,9 @@
                                 </svg>
                                 <p>Online</p>
                             </div>
-                            <div class="description">
-                                <p>Tổ chức các chương trình đào tạo và cấp chứng chỉ theo chuẩn chương trình trong nước, quốc tế….</p>
-                            </div>
+                            <p class="description">
+                                Tổ chức các chương trình đào tạo và cấp chứng chỉ theo chuẩn chương trình trong nước, bla bla bla bla
+                            </p>
                         </div>
                         <div class="view-detail">
                             <a href="">Xem chi tiết</a>
